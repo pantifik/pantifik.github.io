@@ -1,0 +1,145 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+
+	width: 100%;
+
+	background: rgba(255, 255, 255, .5);
+
+	&:hover {
+		background: rgba(107, 107, 107, .3);
+	}
+
+	&__menu {
+		position: relative;
+
+		width: @mediumRate*40;
+		height: @mediumRate*40;
+
+		background: url(/img/icon/menu.svg) 0 0 no-repeat;
+		background-size: 100%;
+
+		.media-lg({ display: none; width: @largeRate*60; height: @largeRate*60; });
+
+		&:hover {
+			.menu-header {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__logo {
+		flex: 1 0 auto;
+
+		padding: 0 @mediumRate*15;
+
+		color: @fontColor;
+		font-family: "Odin Rounded", sans-serif;
+		font-size: @mediumRate*50.58;
+
+		.media-lg({ padding: 0 @largeRate*15; font-size: @largeRate*83.45; });
+	}
+
+	.wrapper {
+		display: flex;
+		align-items: baseline;
+
+		padding-top: @mediumRate*30;
+		padding-bottom: @mediumRate*30;
+
+		.media-lg({ padding-top: @largeRate*50; padding-bottom: @largeRate*50; });
+	}
+}
+
+.menu-header {
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 30vw;
+
+	font-size: 5vw;
+
+	background-color: rgba(255, 255, 255, .3);
+
+	a {
+		color: @fontColor;
+
+		&:after {
+			content: '';
+
+			position: absolute;
+			bottom: 0;
+			left: 25%;
+
+			height: 1px;
+			width: 50%;
+			background-color: #fff;
+		}
+
+		&:hover {
+			&:after {
+				left: 0;
+				width: 100%;
+				transition: .5s;
+			}
+		}
+	}
+
+}
+
+.search {
+	position: relative;
+
+	&__input {
+		width: @mediumRate*40;
+		height: @mediumRate*40;
+
+		padding-right: @mediumRate*40;
+
+		color: #fff;
+		font-family: inherit;
+		font-size: @mediumRate*30;
+
+		outline: none;
+		border: none;
+
+		opacity: 0;
+
+		transition: all .5s;
+
+		&::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+		}
+
+		.media-lg({ width: @largeRate*60; height: @largeRate*60; font-size: @largeRate*30; });
+
+		&:focus {
+			padding-left: @mediumRate*10;
+
+			width: @mediumRate*200;
+
+			border: 1px solid @fontColor-footer;
+			border-radius: @mediumRate*20*1px;
+			box-shadow: 0 0 5px rgba(255, 255, 255, .8);
+
+			opacity: 1;
+			background: rgba(255, 255, 255, .3);
+		}
+	}
+
+	&__btn {
+		z-index: -10;
+		position: absolute;
+		top: 10%;
+		right: 0;
+
+		width: @mediumRate*40;
+		height: @mediumRate*40;
+
+		background: url(/img/icon/search.svg) 0 0 no-repeat;
+		background-size: 80%;
+	}
+}
