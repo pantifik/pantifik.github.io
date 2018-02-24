@@ -28,7 +28,7 @@ $(document).ready(function(){
       balloonContentBody: '3-й гараж от пляжа'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/general/marker.png',
+      iconImageHref: 'img/general/marker.png',
       iconImageSize: [50, 70]
     });
   
