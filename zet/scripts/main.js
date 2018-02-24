@@ -21,6 +21,8 @@ $(document).ready(function(){
     myMap = new ymaps.Map("map", {
       center: [37.7022,-122.4878],
       zoom: 12
+    },{
+      autoFitToViewport: false
     });
   
     myPlacemark = new ymaps.Placemark([37.6906,-122.4855], {
@@ -31,6 +33,12 @@ $(document).ready(function(){
       iconImageHref: 'img/general/marker.png',
       iconImageSize: [50, 70]
     });
+  
+    window.onresize = function(e) {
+      myMap.container._element.style.width = '100%';
+      myMap.container.getElement().style.width = '100%';
+      myMap.container.fitToViewport();
+    };
   
     myMap.geoObjects.add(myPlacemark);
   }
