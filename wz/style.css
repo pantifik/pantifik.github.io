@@ -160,7 +160,7 @@ header {
 	display: inline-block;
 	width: 32px;
 	height: 32px;
-	background: url(../img/house_icon.png) no-repeat center;
+	background: url(img/house_icon.png) no-repeat center;
 	-webkit-background-size: 100%;
 	     -o-background-size: 100%;
 	        background-size: 100%;
