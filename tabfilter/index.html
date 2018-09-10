@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Главная страница</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--begin filters-->
+      <div class="filters">
+        <!--begin selectFilter-->
+        <div class="selectFilter" id="selectFilter">
+          <div class="selectFilter__params">
+            <input class="selectFilter__input" id="display" placeholder="Выберите нужные параметры" disabled>
+            <!--begin menu-->
+            <div class="menu" id="menu">
+              <div class="menu__labelBox">
+                <input class="menu__check" id="item1" type="radio" name="menu__item">
+                <label class="menu__item" for="item1">Диаметр трубы</label>
+                <input class="menu__check" id="item2" type="radio" name="menu__item">
+                <label class="menu__item" for="item2">Тип изделия</label>
+                <input class="menu__check" id="item3" type="radio" name="menu__item">
+                <label class="menu__item" for="item3">Применение</label>
+                <input class="menu__check" id="item4" type="radio" name="menu__item">
+                <label class="menu__item" for="item4">Другое</label>
+              </div>
+              <div class="menu__contentBox" id="contentBox">
+                <!--begin dSelect-->
+                <div class="dSelect" id="dSelect">
+                  <div class="dSelect__inputRow"><span class="dSelect__icon"></span>
+                    <input class="dSelect__input" placeholder="14"><span class="dSelect__t-medium">мм</span>
+                  </div>
+                  <div class="dSelect__comment">
+                    <div class="dSelect__title">
+                      <h5>Диапозон диаметра трубы</h5>
+                    </div>
+                    <div class="dSelect__tRow">
+                      <div class="dSelect__tBox"><span class="dSelect__t-small">min.</span> 4 мм
+                      </div>
+                      <div class="dSelect__tBox"><span class="dSelect__t-small">max.</span> 98 мм
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end dSelect-->
+                <!--begin list-->
+                <div class="list" id="list">
+                  <div class="list__item">Внутренние</div>
+                  <div class="list__item">Наружние</div>
+                  <div class="list__item">С тонкой шляпкой</div>
+                  <div class="list__item">Сферические</div>
+                  <div class="list__item">С резьбой</div>
+                  <div class="list__item">Хромированные</div>
+                  <div class="list__item">Метеллические</div>
+                  <div class="list__item">С резьбой</div>
+                  <div class="list__item">Хромированные</div>
+                  <div class="list__item">Метеллические</div>
+                </div>
+                <!--end list-->
+              </div>
+            </div>
+            <!--end menu-->
+          </div>
+        </div>
+        <!--end selectFilter-->
+      </div>
+      <!--end filters-->
+    </div>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
