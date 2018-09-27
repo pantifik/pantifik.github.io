@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+  <link rel="shortcut icon" type="image/x-icon" href="http://proandro-webinar.logicasoft.pro/favicon.ico"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="keywords" content="Клиника гормонального здоровья и активного долголетия"/>
+  <meta name="description" content="Клиника гормонального здоровья и активного долголетия"/>
+  <script type="text/javascript" data-skip-moving="true">(function (w, d) {
+    var v = w.frameCacheVars = {
+      'CACHE_MODE': 'HTMLCACHE',
+      'storageBlocks': [],
+      'dynamicBlocks': {
+        'GydHei': 'd41d8cd98f00',
+        'bx_basketFKauiI': '9a186b2dc4d4',
+        'y0XwfU': 'd41d8cd98f00',
+        'sender-subscribe': '97691897134f',
+        'bx_basketT0kNhm': '9a186b2dc4d4'
+      },
+      'AUTO_UPDATE': true,
+      'AUTO_UPDATE_TTL': '120'
+    };
+    var inv = false;
+    if (v.AUTO_UPDATE === false) {
+      if (v.AUTO_UPDATE_TTL && v.AUTO_UPDATE_TTL > 0) {
+        var lm = Date.parse(d.lastModified);
+        if (!isNaN(lm)) {
+          var td = new Date().getTime();
+          if ((lm + v.AUTO_UPDATE_TTL * 1000) >= td) {
+            w.frameRequestStart = false;
+            w.preventAutoUpdate = true;
+            return;
+          }
+          inv = true;
+        }
+      } else {
+        w.frameRequestStart = false;
+        w.preventAutoUpdate = true;
+        return;
+      }
+    }
+    var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);
+    if (!r) {
+      return;
+    }
+    w.frameRequestStart = true;
+    var m = v.CACHE_MODE;
+    var l = w.location;
+    var x = new Date().getTime();
+    var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");
+    var u = l.protocol + "http://proandro-webinar.logicasoft.pro//" + l.host + l.pathname + q;
+    r.open("GET", u, true);
+    r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");
+    r.setRequestHeader("BX-CACHE-MODE", m);
+    r.setRequestHeader("BX-CACHE-BLOCKS", v.dynamicBlocks ? JSON.stringify(v.dynamicBlocks) : "");
+    if (inv) {
+      r.setRequestHeader("BX-INVALIDATE-CACHE", "Y");
+    }
+    try {
+      r.setRequestHeader("BX-REF", d.referrer || "");
+    } catch (e) {
+    }
+    if (m === "APPCACHE") {
+      r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));
+      r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");
+    }
+    r.onreadystatechange = function () {
+      if (r.readyState != 4) {
+        return;
+      }
+      var a = r.getResponseHeader("BX-RAND");
+      var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;
+      if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)) {
+        var f = {error: true, reason: a != x ? "bad_rand" : "bad_status", url: u, xhr: r, status: r.status};
+        if (w.BX && w.BX.ready) {
+          BX.ready(function () {
+            setTimeout(function () {
+              BX.onCustomEvent("onFrameDataRequestFail", [f]);
+            }, 0);
+          });
+        } else {
+          w.frameRequestFail = f;
+        }
+        return;
+      }
+      if (b) {
+        b.onFrameDataReceived(r.responseText);
+        if (!w.frameUpdateInvoked) {
+          b.update(false);
+        }
+        w.frameUpdateInvoked = true;
+      } else {
+        w.frameDataString = r.responseText;
+      }
+    };
+    r.send();
+  })(window, document);</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
+
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/css/main/bootstrap.min.css?1531976384121326" type="text/css"
+        rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"
+        rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/css/main/themes/green/style.min.css?1531976384334"
+        type="text/css" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/system.pagenavigation/templates/round/style.min.css?15319763842530"
+        type="text/css" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/style.min.css?15330122943212"
+        type="text/css" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.item/vebinar/style.min.css?153197641122693"
+        type="text/css" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/themes/green/style.min.css?1533012294716"
+        type="text/css" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/css/core_popup.min.css?153197638415451"
+        type="text/css" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/css/core.min.css?15319763842854"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/sale.basket.basket.line/templates/.default/style.min.css?15319764333567"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/menu/templates/catalog_horizontal/style.min.css?15319763849538"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/menu/templates/catalog_horizontal/themes/green/colors.min.css?1531976384837"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/themes/.default/banner.min.css?15319763863829"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/search.title/templates/visual/style.min.css?15319764353445"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/eshop.socnet.links/templates/.default/style.css?15319763871038"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/sender.subscribe/templates/.default/style.min.css?15319764384395"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/news.list/flat/style.min.css?15349308583329"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/news.list/flat/themes/green/style.min.css?1534930858205"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/eshop.socnet.links/templates/big_squares/style.css?153197638732137"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/eshop_bootstrap_green/components/bitrix/menu/bottom_menu/style.css?1531976670542"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/eshop_bootstrap_green/styles.css?15319766705315"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/eshop_bootstrap_green/template_styles.css?153197667015947"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+  <link href="http://proandro-webinar.logicasoft.pro/local/templates/eshop_bootstrap_green/colors.css?15319766702335"
+        type="text/css" data-template-style="true" rel="stylesheet"/>
+
+
+  <link href="new_style.css" type="text/css" rel="stylesheet"/>
+
+
+  <script type="text/javascript">if (!window.BX) window.BX = {};
+  if (!window.BX.message) window.BX.message = function (mess) {
+    if (typeof mess == 'object') for (var i in mess) BX.message[i] = mess[i];
+    return true;
+  };</script>
+  <script type="text/javascript">(window.BX || top.BX).message({
+    'JS_CORE_LOADING': 'Загрузка...',
+    'JS_CORE_NO_DATA': '- Нет данных -',
+    'JS_CORE_WINDOW_CLOSE': 'Закрыть',
+    'JS_CORE_WINDOW_EXPAND': 'Развернуть',
+    'JS_CORE_WINDOW_NARROW': 'Свернуть в окно',
+    'JS_CORE_WINDOW_SAVE': 'Сохранить',
+    'JS_CORE_WINDOW_CANCEL': 'Отменить',
+    'JS_CORE_WINDOW_CONTINUE': 'Продолжить',
+    'JS_CORE_H': 'ч',
+    'JS_CORE_M': 'м',
+    'JS_CORE_S': 'с',
+    'JSADM_AI_HIDE_EXTRA': 'Скрыть лишние',
+    'JSADM_AI_ALL_NOTIF': 'Показать все',
+    'JSADM_AUTH_REQ': 'Требуется авторизация!',
+    'JS_CORE_WINDOW_AUTH': 'Войти',
+    'JS_CORE_IMAGE_FULL': 'Полный размер'
+  });</script>
+  <script type="text/javascript">(window.BX || top.BX).message({
+    'LANGUAGE_ID': 'ru',
+    'FORMAT_DATE': 'DD.MM.YYYY',
+    'FORMAT_DATETIME': 'DD.MM.YYYY HH:MI:SS',
+    'COOKIE_PREFIX': 'BITRIX_SM',
+    'SERVER_TZ_OFFSET': '10800',
+    'SITE_ID': 's1',
+    'SITE_DIR': 'http://proandro-webinar.logicasoft.pro/'
+  });</script>
+
+
+  <script type="text/javascript"
+          src="http://proandro-webinar.logicasoft.pro/bitrix/cache/js/s1/eshop_bootstrap_green/kernel_main/kernel_main.js?1534925877307784"></script>
+  <script type="text/javascript"
+          src="http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core_db.min.js?153197638410247"></script>
+  <script type="text/javascript"
+          src="http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core_frame_cache.min.js?153197638411189"></script>
+  <script type="text/javascript"
+          src="http://proandro-webinar.logicasoft.pro/bitrix/cache/js/s1/eshop_bootstrap_green/kernel_currency/kernel_currency.js?15349257211875"></script>
+  <script type="text/javascript">BX.setJSList(['http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core_fx.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core_ajax.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core_popup.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core_window.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/json/json2.min.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core_ls.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/session.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/core/core_date.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/main/utils.js', 'http://proandro-webinar.logicasoft.pro/bitrix/js/currency/core_currency.js', 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/script.js', 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.item/vebinar/script.js', 'http://proandro-webinar.logicasoft.pro/local/templates/eshop_bootstrap_green/js/jquery-3.3.1.min.js', 'http://proandro-webinar.logicasoft.pro/local/templates/eshop_bootstrap_green/js/inputmask.js', 'http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/sale.basket.basket.line/templates/.default/script.js', 'http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/menu/templates/catalog_horizontal/script.js', 'http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/advertising.banner/templates/bootstrap/bxcarousel.js', 'http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/search.title/script.js', 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/news.list/flat/script.js']); </script>
+  <script type="text/javascript">
+    (function () {
+      "use strict";
+      
+      var counter = function () {
+        var cookie = (function (name) {
+          var parts = ("; " + document.cookie).split("; " + name + "=");
+          if (parts.length == 2) {
+            try {
+              return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));
+            }
+            catch (e) {
+            }
+          }
+        })("BITRIX_CONVERSION_CONTEXT_s1");
+        
+        if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+          return;
+        
+        var request = new XMLHttpRequest();
+        request.open("POST", "http://proandro-webinar.logicasoft.pro/bitrix/tools/conversion/ajax_counter.php", true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send(
+          "SITE_ID=" + encodeURIComponent("s1") +
+          "&sessid=" + encodeURIComponent(BX.bitrix_sessid()) +
+          "&HTTP_REFERER=" + encodeURIComponent(document.referrer)
+        );
+      };
+      
+      if (window.frameRequestStart === true)
+        BX.addCustomEvent("onFrameDataReceived", counter);
+      else
+        BX.ready(counter);
+    })();
+  </script>
+
+
+  <script type="text/javascript"
+          src="http://proandro-webinar.logicasoft.pro/bitrix/cache/js/s1/eshop_bootstrap_green/template_78fe4ab150c9c4e68cf4af9cae5e258d/template_78fe4ab150c9c4e68cf4af9cae5e258d.js?1537781600294731"></script>
+  <script type="text/javascript"
+          src="http://proandro-webinar.logicasoft.pro/bitrix/cache/js/s1/eshop_bootstrap_green/page_916ab0545439da8d36ef011ba3e3cf6b/page_916ab0545439da8d36ef011ba3e3cf6b.js?153778152369441"></script>
+  <script type="text/javascript">var _ba = _ba || [];
+  _ba.push(["aid", "151359e1e30b313ea0ddd4c955bb9bf9"]);
+  _ba.push(["host", "proandro-webinar.logicasoft.pro"]);
+  (function () {
+    var ba = document.createElement("script");
+    ba.type = "text/javascript";
+    ba.async = true;
+    ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(ba, s);
+  })();</script>
+
+
+  <meta property="og:type" content="website" http:
+  //proandro-webinar.logicasoft.pro/>
+  <meta property="og:title" content="" http:
+  //proandro-webinar.logicasoft.pro/>
+  <meta property="og:image"
+        content="http://proandro-webinar.logicasoft.pro/upload/medialibrary/589/5894113a33d6c877ebb666934bb51f20.png"
+        http:
+  //proandro-webinar.logicasoft.pro/>
+  <meta property="og:url" content="http://proandro-webinar.logicasoft.pro/index.php" http:
+  //proandro-webinar.logicasoft.pro/> <title>Клиника гормонального здоровья и активного долголетия</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124528607-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-124528607-1');
+  </script>
+</head>
+<body class="">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function (d, w, c) {
+    (w[c] = w[c] || []).push(function () {
+      try {
+        w.yaCounter50065141 = new Ya.Metrika2({
+          id: 50065141,
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true,
+          ecommerce: "dataLayer"
+        });
+      } catch (e) {
+      }
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function () {
+        n.parentNode.insertBefore(s, n);
+      };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js";
+    
+    if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+    } else {
+      f();
+    }
+  })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript>
+  <div><img src="https://mc.yandex.ru/watch/50065141" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div id="panel"></div>
+<div id="bxdynamic_GydHei_start" style="display:none"></div>
+<div id="bxdynamic_GydHei_end" style="display:none"></div>
+<div class="bx-wrapper" id="bx_eshop_wrap">
+  <header class="bx-header">
+    <div class="bx-header-section container">
+      <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12">
+          <div class="bx-logo">
+            <a class="bx-logo-block hidden-xs" href="http://proandro-webinar.logicasoft.pro/">
+              <img alt="logokk.png"
+                   src="http://proandro-webinar.logicasoft.pro/upload/medialibrary/589/5894113a33d6c877ebb666934bb51f20.png"
+                   srcset="http://proandro-webinar.logicasoft.pro/upload/medialibrary/589/5894113a33d6c877ebb666934bb51f20.png"
+                   title="logokk.png"> </a>
+            <a class="bx-logo-block hidden-lg hidden-md hidden-sm text-center"
+               href="http://proandro-webinar.logicasoft.pro/">
+              <img alt="logokk.png"
+                   src="http://proandro-webinar.logicasoft.pro/upload/medialibrary/589/5894113a33d6c877ebb666934bb51f20.png"
+                   srcset="http://proandro-webinar.logicasoft.pro/include/logo_mobile_retina.png" title="logokk.png">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-3 hidden-sm hidden-xs">
+          <div class="bx-worktime">
+            <div class="bx-worktime-prop">
+				<h1 class="header-title text-red">
+					Клиника гормональногоздоровья и активного долголетия
+				</h1>
+              <p>
+              	Концептуальная клиника экспертного уровня официальная
+              	клиническая база кафедры эндокринологии рудн
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+          <div class="bx-inc-orginfo">
+            <div>
+              <span class="bx-inc-orginfo-phone text-red"><i class="fa fa-phone"></i> 8 (495) 937 34 03</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 hidden-xs">
+          <script>
+            var bx_basketFKauiI = new BitrixSmallCart;
+          </script>
+          <div id="bx_basketFKauiI" class="bx-basket bx-opener">
+            <div class="bx-hdr-profile">
+              <div class="bx-basket-block btn">
+                <a href="http://proandro-webinar.logicasoft.pro/login/?login=yes&backurl=%2Findex.php">Личный кабинет</a></div>
+            </div>
+          </div>
+          <script type="text/javascript">
+            bx_basketFKauiI.siteId = 's1';
+            bx_basketFKauiI.cartId = 'bx_basketFKauiI';
+            bx_basketFKauiI.ajaxPath = 'http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/sale.basket.basket.line/ajax.php';
+            bx_basketFKauiI.templateName = '.default';
+            bx_basketFKauiI.arParams = {
+              'PATH_TO_BASKET': 'http://proandro-webinar.logicasoft.pro/personal/cart/',
+              'PATH_TO_PERSONAL': 'http://proandro-webinar.logicasoft.pro/personal/',
+              'SHOW_PERSONAL_LINK': 'N',
+              'SHOW_NUM_PRODUCTS': 'Y',
+              'SHOW_TOTAL_PRICE': 'Y',
+              'SHOW_PRODUCTS': 'N',
+              'POSITION_FIXED': 'N',
+              'SHOW_AUTHOR': 'Y',
+              'PATH_TO_REGISTER': 'http://proandro-webinar.logicasoft.pro/login/',
+              'PATH_TO_PROFILE': 'http://proandro-webinar.logicasoft.pro/personal/',
+              'CACHE_TYPE': 'A',
+              'PATH_TO_ORDER': 'http://proandro-webinar.logicasoft.pro/personal/order/make/',
+              'HIDE_ON_BASKET_PAGES': 'Y',
+              'SHOW_EMPTY_VALUES': 'Y',
+              'SHOW_REGISTRATION': 'Y',
+              'PATH_TO_AUTHORIZE': 'http://proandro-webinar.logicasoft.pro/login/',
+              'SHOW_DELAY': 'Y',
+              'SHOW_NOTAVAIL': 'Y',
+              'SHOW_IMAGE': 'Y',
+              'SHOW_PRICE': 'Y',
+              'SHOW_SUMMARY': 'Y',
+              'POSITION_VERTICAL': 'top',
+              'POSITION_HORIZONTAL': 'right',
+              'AJAX': 'N',
+              '~PATH_TO_BASKET': 'http://proandro-webinar.logicasoft.pro/personal/cart/',
+              '~PATH_TO_PERSONAL': 'http://proandro-webinar.logicasoft.pro/personal/',
+              '~SHOW_PERSONAL_LINK': 'N',
+              '~SHOW_NUM_PRODUCTS': 'Y',
+              '~SHOW_TOTAL_PRICE': 'Y',
+              '~SHOW_PRODUCTS': 'N',
+              '~POSITION_FIXED': 'N',
+              '~SHOW_AUTHOR': 'Y',
+              '~PATH_TO_REGISTER': 'http://proandro-webinar.logicasoft.pro/login/',
+              '~PATH_TO_PROFILE': 'http://proandro-webinar.logicasoft.pro/personal/',
+              '~CACHE_TYPE': 'A',
+              '~PATH_TO_ORDER': 'http://proandro-webinar.logicasoft.pro/personal/order/make/',
+              '~HIDE_ON_BASKET_PAGES': 'Y',
+              '~SHOW_EMPTY_VALUES': 'Y',
+              '~SHOW_REGISTRATION': 'Y',
+              '~PATH_TO_AUTHORIZE': 'http://proandro-webinar.logicasoft.pro/login/',
+              '~SHOW_DELAY': 'Y',
+              '~SHOW_NOTAVAIL': 'Y',
+              '~SHOW_IMAGE': 'Y',
+              '~SHOW_PRICE': 'Y',
+              '~SHOW_SUMMARY': 'Y',
+              '~POSITION_VERTICAL': 'top',
+              '~POSITION_HORIZONTAL': 'right',
+              '~AJAX': 'N',
+              'cartId': 'bx_basketFKauiI'
+            }; // TODO \Bitrix\Main\Web\Json::encode
+            bx_basketFKauiI.closeMessage = 'Скрыть';
+            bx_basketFKauiI.openMessage = 'Раскрыть';
+            bx_basketFKauiI.activate();
+          </script>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 hidden-xs">
+          <div class="bx-top-nav bx-green" id="catalog_menu_LkGdQn">
+            <nav class="bx-top-nav-container" id="cont_catalog_menu_LkGdQn">
+              <ul class="bx-nav-list-1-lvl" id="ul_catalog_menu_LkGdQn">
+                <!-- first level-->
+                <li
+                        class="bx-nav-1-lvl bx-nav-list-0-col "
+                        onmouseover="BX.CatalogMenu.itemOver(this);"
+                        onmouseout="BX.CatalogMenu.itemOut(this)"
+                        onclick="if (BX.hasClass(document.documentElement, 'bx-touch')) obj_catalog_menu_LkGdQn.clickInMobile(this, event);"
+                >
+                  <a
+                          href="http://proandro-webinar.logicasoft.pro/catalog/"
+                  >
+					<span>
+						Вебинары											</span>
+                  </a>
+                </li>
+                <!-- first level-->
+                <li
+                        class="bx-nav-1-lvl bx-nav-list-0-col "
+                        onmouseover="BX.CatalogMenu.itemOver(this);"
+                        onmouseout="BX.CatalogMenu.itemOut(this)"
+                        onclick="if (BX.hasClass(document.documentElement, 'bx-touch')) obj_catalog_menu_LkGdQn.clickInMobile(this, event);"
+                >
+                  <a
+                          href="http://proandro-webinar.logicasoft.pro/news/"
+                  >
+					<span>
+						Печатные материалы											</span>
+                  </a>
+                </li>
+                <!-- first level-->
+                <li
+                        class="bx-nav-1-lvl bx-nav-list-0-col "
+                        onmouseover="BX.CatalogMenu.itemOver(this);"
+                        onmouseout="BX.CatalogMenu.itemOut(this)"
+                        onclick="if (BX.hasClass(document.documentElement, 'bx-touch')) obj_catalog_menu_LkGdQn.clickInMobile(this, event);"
+                >
+                  <a
+                          href="http://proandro-webinar.logicasoft.pro/about-the-lecturer/"
+                  >
+					<span>
+						О лекторах											</span>
+                  </a>
+                </li>
+                <!-- first level-->
+                <li
+                        class="bx-nav-1-lvl bx-nav-list-0-col "
+                        onmouseover="BX.CatalogMenu.itemOver(this);"
+                        onmouseout="BX.CatalogMenu.itemOut(this)"
+                        onclick="if (BX.hasClass(document.documentElement, 'bx-touch')) obj_catalog_menu_LkGdQn.clickInMobile(this, event);"
+                >
+                  <a
+                          href="http://proandro-webinar.logicasoft.pro/about/opinion/"
+                  >
+					<span>
+						Отзывы											</span>
+                  </a>
+                </li>
+                <!-- first level-->
+                <li
+                        class="bx-nav-1-lvl bx-nav-list-0-col "
+                        onmouseover="BX.CatalogMenu.itemOver(this);"
+                        onmouseout="BX.CatalogMenu.itemOut(this)"
+                        onclick="if (BX.hasClass(document.documentElement, 'bx-touch')) obj_catalog_menu_LkGdQn.clickInMobile(this, event);"
+                >
+                  <a
+                          href="http://proandro-webinar.logicasoft.pro/about/howto/"
+                  >
+					<span>
+						Как оплатить											</span>
+                  </a>
+                </li>
+                <!-- first level-->
+                <li
+                        class="bx-nav-1-lvl bx-nav-list-0-col "
+                        onmouseover="BX.CatalogMenu.itemOver(this);"
+                        onmouseout="BX.CatalogMenu.itemOut(this)"
+                        onclick="if (BX.hasClass(document.documentElement, 'bx-touch')) obj_catalog_menu_LkGdQn.clickInMobile(this, event);"
+                >
+                  <a
+                          href="http://proandro-webinar.logicasoft.pro/about/offer/"
+                  >
+					<span>
+						Оферта											</span>
+                  </a>
+                </li>
+                <!-- first level-->
+                <li
+                        class="bx-nav-1-lvl bx-nav-list-0-col "
+                        onmouseover="BX.CatalogMenu.itemOver(this);"
+                        onmouseout="BX.CatalogMenu.itemOut(this)"
+                        onclick="if (BX.hasClass(document.documentElement, 'bx-touch')) obj_catalog_menu_LkGdQn.clickInMobile(this, event);"
+                >
+                  <a
+                          href="http://proandro-webinar.logicasoft.pro/about/contacts/"
+                  >
+					<span>
+						Контакты											</span>
+                  </a>
+                </li>
+              </ul>
+              <div style="clear: both;"></div>
+            </nav>
+          </div>
+
+          <script>
+            BX.ready(function () {
+              window.obj_catalog_menu_LkGdQn = new BX.Main.Menu.CatalogHorizontal('catalog_menu_LkGdQn', {
+                '1326689376': {
+                  'PICTURE': '',
+                  'DESC': ''
+                },
+                '2478813668': {'PICTURE': '', 'DESC': ''},
+                '509865208': {'PICTURE': '', 'DESC': ''},
+                '3135905936': {'PICTURE': '', 'DESC': ''},
+                '3093538711': {'PICTURE': '', 'DESC': ''},
+                '2723897599': {'PICTURE': '', 'DESC': ''},
+                '3493504215': {'PICTURE': '', 'DESC': ''}
+              });
+            });
+          </script>
+        </div>
+      </div>
+
+      <h1 style="display: none">Клиника гормонального здоровья и активного долголетия</h1>
+    </div>
+  </header>
+
+
+  <div id="bxdynamic_y0XwfU_start" style="display:none"></div>
+  <div id="bxdynamic_y0XwfU_end" style="display:none"></div>
+
+  <div class="workarea">
+
+    <div class="container bx-content-seection">
+      <div id="search" class="bx-searchtitle">
+        <form action="http://proandro-webinar.logicasoft.pro/catalog/">
+          <div class="bx-input-group">
+            <input id="title-search-input" type="text" name="q" value="" autocomplete="off" class="bx-form-control"
+                   http://proandro-webinar.logicasoft.pro/>
+            <span class="bx-input-group-btn">
+					<button class="btn btn-default" type="submit" name="s"><i class="fa fa-search"></i></button>
+				</span>
+          </div>
+        </form>
+      </div>
+      <script>
+        BX.ready(function () {
+          new JCTitleSearch({
+            'AJAX_PAGE': 'http://proandro-webinar.logicasoft.pro/',
+            'CONTAINER_ID': 'search',
+            'INPUT_ID': 'title-search-input',
+            'MIN_QUERY_LEN': 2
+          });
+        });
+      </script>
+      <div class="row">
+        <div class="bx-content col-md-12 col-sm-12"><h2>Последние вебинары</h2>
+          <div class="bx-section-desc bx-green">
+            <p class="bx-section-desc-post"></p>
+          </div>
+
+          <div class="catalog-section bx-green" data-entity="container-1">
+            <!-- items-container -->
+            <div class="row product-item-list-col-3" data-entity="items-row">
+              <div class="col-xs-12 product-item-small-card">
+                <div class="row">
+                  <div class="col-sm-6 product-item-big-card">
+                    <div class="row">
+                      <div class="col-md-12">
+
+                        <div class="product-item-container"
+                             id="bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206" data-entity="item">
+
+                          <div class="product-item">
+                            <a class="product-item-image-wrapper"
+                               href="http://proandro-webinar.logicasoft.pro/catalog/outdoor-education/obesity-and-type-2-diabetes-treatable/"
+                               title="картинка ОЖИРЕНИЕ И ДИАБЕТ 2 ТИПА ИЗЛЕЧИМЫ магазин Одежда+ являющийся официальным дистрибьютором в России "
+                               data-entity="image-wrapper">
+		<span class="product-item-image-slider-slide-container slide"
+          id="bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_pict_slider"
+          style="display: none;" data-slider-interval="3000" data-slider-wrap="true">
+					</span>
+                              <span class="product-item-image-original"
+                                    id="bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_pict"
+                                    style="background-image: url('http://proandro-webinar.logicasoft.pro/upload/iblock/52f/52fcb7a5e0423c558d169b1688b6122c.jpg'); ">
+		</span>
+                              <span class="product-item-image-alternative"
+                                    id="bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_secondpict"
+                                    style="background-image: url('http://proandro-webinar.logicasoft.pro/upload/iblock/52f/52fcb7a5e0423c558d169b1688b6122c.jpg'); ">
+			</span>
+                              <div class="product-item-image-slider-control-container"
+                                   id="bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_pict_slider_indicator"
+                                   style="display: none;">
+                              </div>
+                            </a>
+                            <div class="product-item-title">
+                              <a href="http://proandro-webinar.logicasoft.pro/catalog/outdoor-education/obesity-and-type-2-diabetes-treatable/"
+                                 title="ОЖИРЕНИЕ И ДИАБЕТ 2 ТИПА ИЗЛЕЧИМЫ">ОЖИРЕНИЕ И ДИАБЕТ 2 ТИПА ИЗЛЕЧИМЫ</a>
+                            </div>
+                            <div class="product-item-info-container product-item-price-container"
+                                 data-entity="price-block">
+													<span class="product-item-price-old"
+                                id="bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_price_old"
+                                style="display: none;">
+								5 руб.							</span>&nbsp;
+                              <span class="product-item-price-current"
+                                    id="bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_price">
+							от 5 руб. за 1 шт						</span>
+                            </div>
+                            <div class="product-item-info-container product-item-hidden" data-entity="buttons-block">
+                              <div class="product-item-button-container">
+                                <a class="btn btn-default btn-md"
+                                   href="http://proandro-webinar.logicasoft.pro/catalog/outdoor-education/obesity-and-type-2-diabetes-treatable/">
+                                  Подробнее </a>
+                              </div>
+                            </div>
+                          </div>
+                          <script>
+                            var obbx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206 = new JCCatalogItem({
+                              'PRODUCT_TYPE': '3',
+                              'SHOW_QUANTITY': false,
+                              'SHOW_ADD_BASKET_BTN': false,
+                              'SHOW_BUY_BTN': true,
+                              'SHOW_ABSENT': true,
+                              'SHOW_SKU_PROPS': false,
+                              'SECOND_PICT': true,
+                              'SHOW_OLD_PRICE': true,
+                              'SHOW_MAX_QUANTITY': 'N',
+                              'RELATIVE_QUANTITY_FACTOR': '5',
+                              'SHOW_DISCOUNT_PERCENT': false,
+                              'ADD_TO_BASKET_ACTION': 'ADD',
+                              'SHOW_CLOSE_POPUP': false,
+                              'DISPLAY_COMPARE': false,
+                              'BIG_DATA': false,
+                              'TEMPLATE_THEME': 'green',
+                              'VIEW_MODE': 'CARD',
+                              'USE_SUBSCRIBE': false,
+                              'DEFAULT_PICTURE': {
+                                'PICTURE': {
+                                  'ID': '0',
+                                  'SRC': 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/images/no_photo.png',
+                                  'WIDTH': '150',
+                                  'HEIGHT': '150'
+                                },
+                                'PICTURE_SECOND': {
+                                  'ID': '0',
+                                  'SRC': 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/images/no_photo.png',
+                                  'WIDTH': '150',
+                                  'HEIGHT': '150'
+                                }
+                              },
+                              'VISUAL': {
+                                'ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206',
+                                'PICT_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_pict',
+                                'SECOND_PICT_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_secondpict',
+                                'PICT_SLIDER_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_pict_slider',
+                                'QUANTITY_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_quantity',
+                                'QUANTITY_UP_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_quant_up',
+                                'QUANTITY_DOWN_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_quant_down',
+                                'QUANTITY_MEASURE': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_quant_measure',
+                                'QUANTITY_LIMIT': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_quant_limit',
+                                'PRICE_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_price',
+                                'PRICE_OLD_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_price_old',
+                                'PRICE_TOTAL_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_price_total',
+                                'TREE_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_sku_tree',
+                                'TREE_ITEM_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_prop_',
+                                'BUY_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_buy_link',
+                                'DSC_PERC': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_dsc_perc',
+                                'SECOND_DSC_PERC': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_second_dsc_perc',
+                                'DISPLAY_PROP_DIV': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_sku_prop',
+                                'BASKET_ACTIONS_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_basket_actions',
+                                'NOT_AVAILABLE_MESS': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_not_avail',
+                                'COMPARE_LINK_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_compare_link',
+                                'SUBSCRIBE_ID': 'bx_3966226736_324_7e1b8e3524755c391129a9d7e6f2d206_subscribe'
+                              },
+                              'BASKET': {
+                                'QUANTITY': 'quantity',
+                                'PROPS': 'prop',
+                                'SKU_PROPS': '',
+                                'BASKET_URL': 'http://proandro-webinar.logicasoft.pro/personal/cart/',
+                                'ADD_URL_TEMPLATE': 'http://proandro-webinar.logicasoft.pro/index.php?action=ADD2BASKET&id=#ID#',
+                                'BUY_URL_TEMPLATE': 'http://proandro-webinar.logicasoft.pro/index.php?action=BUY&id=#ID#'
+                              },
+                              'PRODUCT': {
+                                'ID': '324',
+                                'NAME': 'ОЖИРЕНИЕ И ДИАБЕТ 2 ТИПА ИЗЛЕЧИМЫ',
+                                'DETAIL_PAGE_URL': 'http://proandro-webinar.logicasoft.pro/catalog/outdoor-education/obesity-and-type-2-diabetes-treatable/',
+                                'MORE_PHOTO': [{
+                                  'ID': '0',
+                                  'SRC': 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/images/no_photo.png',
+                                  'WIDTH': '150',
+                                  'HEIGHT': '150'
+                                }],
+                                'MORE_PHOTO_COUNT': '1'
+                              },
+                              'OFFERS': [],
+                              'OFFER_SELECTED': '0',
+                              'TREE_PROPS': [],
+                              'PRODUCT_DISPLAY_MODE': 'N',
+                              'USE_ENHANCED_ECOMMERCE': 'N',
+                              'DATA_LAYER_NAME': 'dataLayer',
+                              'BRAND_PROPERTY': ''
+                            });
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 product-item-big-card">
+                    <div class="row">
+                      <div class="col-md-12">
+
+                        <div class="product-item-container"
+                             id="bx_3966226736_33_362ce596257894d11ab5c1d73d13c755" data-entity="item">
+
+                          <div class="product-item">
+                            <a class="product-item-image-wrapper"
+                               href="http://proandro-webinar.logicasoft.pro/catalog/for-doctors/vitamin_d_i_zabolevaniya_zhkt_smart_diagnostika_vit_d_i_kishechnik_komu_kogda_skolko_smart_lechenie/"
+                               title="картинка Витамин Д и заболевания ЖКТ: SMART-диагностика. Вит Д и кишечник: кому, когда, сколько? SMART-лечение магазин Одежда+ являющийся официальным дистрибьютором в России "
+                               data-entity="image-wrapper">
+		<span class="product-item-image-slider-slide-container slide"
+          id="bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_pict_slider"
+          style="display: none;" data-slider-interval="3000" data-slider-wrap="true">
+					</span>
+                              <span class="product-item-image-original"
+                                    id="bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_pict"
+                                    style="background-image: url('http://proandro-webinar.logicasoft.pro/upload/iblock/c6c/c6c22e1f24ac180b2dc8d5eaab4d87b4.jpg'); ">
+		</span>
+                              <span class="product-item-image-alternative"
+                                    id="bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_secondpict"
+                                    style="background-image: url('http://proandro-webinar.logicasoft.pro/upload/iblock/c6c/c6c22e1f24ac180b2dc8d5eaab4d87b4.jpg'); ">
+			</span>
+                              <div class="product-item-image-slider-control-container"
+                                   id="bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_pict_slider_indicator"
+                                   style="display: none;">
+                              </div>
+                            </a>
+                            <div class="product-item-title">
+                              <a href="http://proandro-webinar.logicasoft.pro/catalog/for-doctors/vitamin_d_i_zabolevaniya_zhkt_smart_diagnostika_vit_d_i_kishechnik_komu_kogda_skolko_smart_lechenie/"
+                                 title="Витамин Д и заболевания ЖКТ: SMART-диагностика. Вит Д и кишечник: кому, когда, сколько? SMART-лечение">Витамин
+                                Д и заболевания ЖКТ: SMART-диагностика. Вит Д и кишечник: кому, когда, сколько?
+                                SMART-лечение</a>
+                            </div>
+                            <div class="product-item-info-container product-item-price-container"
+                                 data-entity="price-block">
+													<span class="product-item-price-old"
+                                id="bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_price_old"
+                                style="display: none;">
+								3 руб.							</span>&nbsp;
+                              <span class="product-item-price-current"
+                                    id="bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_price">
+							от 3 руб. за 1 шт						</span>
+                            </div>
+                            <div class="product-item-info-container product-item-hidden" data-entity="buttons-block">
+                              <div class="product-item-button-container">
+                                <a class="btn btn-default btn-md"
+                                   href="http://proandro-webinar.logicasoft.pro/catalog/for-doctors/vitamin_d_i_zabolevaniya_zhkt_smart_diagnostika_vit_d_i_kishechnik_komu_kogda_skolko_smart_lechenie/">
+                                  Подробнее </a>
+                              </div>
+                            </div>
+                          </div>
+                          <script>
+                            var obbx_3966226736_33_362ce596257894d11ab5c1d73d13c755 = new JCCatalogItem({
+                              'PRODUCT_TYPE': '3',
+                              'SHOW_QUANTITY': false,
+                              'SHOW_ADD_BASKET_BTN': false,
+                              'SHOW_BUY_BTN': true,
+                              'SHOW_ABSENT': true,
+                              'SHOW_SKU_PROPS': false,
+                              'SECOND_PICT': true,
+                              'SHOW_OLD_PRICE': true,
+                              'SHOW_MAX_QUANTITY': 'N',
+                              'RELATIVE_QUANTITY_FACTOR': '5',
+                              'SHOW_DISCOUNT_PERCENT': false,
+                              'ADD_TO_BASKET_ACTION': 'ADD',
+                              'SHOW_CLOSE_POPUP': false,
+                              'DISPLAY_COMPARE': false,
+                              'BIG_DATA': false,
+                              'TEMPLATE_THEME': 'green',
+                              'VIEW_MODE': 'CARD',
+                              'USE_SUBSCRIBE': false,
+                              'DEFAULT_PICTURE': {
+                                'PICTURE': {
+                                  'ID': '0',
+                                  'SRC': 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/images/no_photo.png',
+                                  'WIDTH': '150',
+                                  'HEIGHT': '150'
+                                },
+                                'PICTURE_SECOND': {
+                                  'ID': '0',
+                                  'SRC': 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/images/no_photo.png',
+                                  'WIDTH': '150',
+                                  'HEIGHT': '150'
+                                }
+                              },
+                              'VISUAL': {
+                                'ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755',
+                                'PICT_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_pict',
+                                'SECOND_PICT_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_secondpict',
+                                'PICT_SLIDER_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_pict_slider',
+                                'QUANTITY_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_quantity',
+                                'QUANTITY_UP_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_quant_up',
+                                'QUANTITY_DOWN_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_quant_down',
+                                'QUANTITY_MEASURE': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_quant_measure',
+                                'QUANTITY_LIMIT': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_quant_limit',
+                                'PRICE_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_price',
+                                'PRICE_OLD_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_price_old',
+                                'PRICE_TOTAL_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_price_total',
+                                'TREE_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_sku_tree',
+                                'TREE_ITEM_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_prop_',
+                                'BUY_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_buy_link',
+                                'DSC_PERC': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_dsc_perc',
+                                'SECOND_DSC_PERC': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_second_dsc_perc',
+                                'DISPLAY_PROP_DIV': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_sku_prop',
+                                'BASKET_ACTIONS_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_basket_actions',
+                                'NOT_AVAILABLE_MESS': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_not_avail',
+                                'COMPARE_LINK_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_compare_link',
+                                'SUBSCRIBE_ID': 'bx_3966226736_33_362ce596257894d11ab5c1d73d13c755_subscribe'
+                              },
+                              'BASKET': {
+                                'QUANTITY': 'quantity',
+                                'PROPS': 'prop',
+                                'SKU_PROPS': '',
+                                'BASKET_URL': 'http://proandro-webinar.logicasoft.pro/personal/cart/',
+                                'ADD_URL_TEMPLATE': 'http://proandro-webinar.logicasoft.pro/index.php?action=ADD2BASKET&id=#ID#',
+                                'BUY_URL_TEMPLATE': 'http://proandro-webinar.logicasoft.pro/index.php?action=BUY&id=#ID#'
+                              },
+                              'PRODUCT': {
+                                'ID': '33',
+                                'NAME': 'Витамин Д и заболевания ЖКТ: SMART-диагностика. Вит Д и кишечник: кому, когда, сколько? SMART-лечение',
+                                'DETAIL_PAGE_URL': 'http://proandro-webinar.logicasoft.pro/catalog/for-doctors/vitamin_d_i_zabolevaniya_zhkt_smart_diagnostika_vit_d_i_kishechnik_komu_kogda_skolko_smart_lechenie/',
+                                'MORE_PHOTO': [{
+                                  'ID': '0',
+                                  'SRC': 'http://proandro-webinar.logicasoft.pro/local/templates/.default/components/bitrix/catalog.section/vebinar/images/no_photo.png',
+                                  'WIDTH': '150',
+                                  'HEIGHT': '150'
+                                }],
+                                'MORE_PHOTO_COUNT': '1'
+                              },
+                              'OFFERS': [],
+                              'OFFER_SELECTED': '0',
+                              'TREE_PROPS': [],
+                              'PRODUCT_DISPLAY_MODE': 'N',
+                              'USE_ENHANCED_ECOMMERCE': 'N',
+                              'DATA_LAYER_NAME': 'dataLayer',
+                              'BRAND_PROPERTY': ''
+                            });
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- items-container -->
+          </div>
+          <script>
+            BX.message({
+              BTN_MESSAGE_BASKET_REDIRECT: 'Перейти в корзину',
+              BASKET_URL: 'http://proandro-webinar.logicasoft.pro/personal/cart/',
+              ADD_TO_BASKET_OK: 'Товар добавлен в корзину',
+              TITLE_ERROR: 'Ошибка',
+              TITLE_BASKET_PROPS: 'Свойства товара, добавляемые в корзину',
+              TITLE_SUCCESSFUL: 'Товар добавлен в корзину',
+              BASKET_UNKNOWN_ERROR: 'Неизвестная ошибка при добавлении товара в корзину',
+              BTN_MESSAGE_SEND_PROPS: 'Выбрать',
+              BTN_MESSAGE_CLOSE: 'Закрыть',
+              BTN_MESSAGE_CLOSE_POPUP: 'Продолжить покупки',
+              COMPARE_MESSAGE_OK: 'Товар добавлен в список сравнения',
+              COMPARE_UNKNOWN_ERROR: 'При добавлении товара в список сравнения произошла ошибка',
+              COMPARE_TITLE: 'Сравнение товаров',
+              PRICE_TOTAL_PREFIX: 'на сумму',
+              RELATIVE_QUANTITY_MANY: '',
+              RELATIVE_QUANTITY_FEW: '',
+              BTN_MESSAGE_COMPARE_REDIRECT: 'Перейти в список сравнения',
+              BTN_MESSAGE_LAZY_LOAD: 'Показать ещё',
+              BTN_MESSAGE_LAZY_LOAD_WAITER: 'Загрузка',
+              SITE_ID: 's1'
+            });
+            var obbx_3966226736_1 = new JCCatalogSectionComponent({
+              siteId: 's1',
+              componentPath: 'http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/catalog.section',
+              navParams: {'NavPageCount': '1', 'NavPageNomer': '1', 'NavNum': '1'},
+              deferredLoad: false, // enable it for deferred load
+              initiallyShowHeader: '1',
+              bigData: {
+                'enabled': false,
+                'rows': [],
+                'count': '0',
+                'rowsRange': [],
+                'shownIds': ['324', '33'],
+                'js': {'cookiePrefix': 'BITRIX_SM', 'cookieDomain': '', 'serverTime': '1537990242'},
+                'params': {
+                  'uid': '24af2aed5640dce26f03ba70f203b05a',
+                  'aid': '151359e1e30b313ea0ddd4c955bb9bf9',
+                  'count': '30',
+                  'op': 'recommend',
+                  'ib': '2'
+                }
+              },
+              lazyLoad: !!'',
+              loadOnScroll: !!'',
+              template: 'vebinar.a6c678466cf0059bb5313a748566a3ea8bd7e8f1c3c0b9ab2d37728a69eda79c',
+              ajaxId: '',
+              parameters: 'YTo5Mzp7czoxNToiQUNUSU9OX1ZBUklBQkxFIjtzOjY6ImFjdGlvbiI7czoxMzoiQUREX1BJQ1RfUFJPUCI7czoxMDoiTU9SRV9QSE9UTyI7czoyNDoiQUREX1BST1BFUlRJRVNfVE9fQkFTS0VUIjtzOjE6IlkiO3M6MTg6IkFERF9TRUNUSU9OU19DSEFJTiI7czoxOiJOIjtzOjIwOiJBRERfVE9fQkFTS0VUX0FDVElPTiI7czozOiJBREQiO3M6OToiQUpBWF9NT0RFIjtzOjE6Ik4iO3M6MjI6IkFKQVhfT1BUSU9OX0FERElUSU9OQUwiO3M6MDoiIjtzOjE5OiJBSkFYX09QVElPTl9ISVNUT1JZIjtzOjE6Ik4iO3M6MTY6IkFKQVhfT1BUSU9OX0pVTVAiO3M6MToiTiI7czoxNzoiQUpBWF9PUFRJT05fU1RZTEUiO3M6MToiWSI7czoxMDoiQkFTS0VUX1VSTCI7czoxNToiL3BlcnNvbmFsL2NhcnQvIjtzOjEzOiJCUk9XU0VSX1RJVExFIjtzOjE6Ii0iO3M6MTI6IkNBQ0hFX0ZJTFRFUiI7czoxOiJOIjtzOjEyOiJDQUNIRV9HUk9VUFMiO3M6MToiWSI7czoxMDoiQ0FDSEVfVElNRSI7czo4OiIzNjAwMDAwMCI7czoxMDoiQ0FDSEVfVFlQRSI7czoxOiJBIjtzOjE1OiJDT01QQVRJQkxFX01PREUiO3M6MToiTiI7czoxODoiQ09NUE9ORU5UX1RFTVBMQVRFIjtzOjA6IiI7czoxNjoiQ09OVkVSVF9DVVJSRU5DWSI7czoxOiJOIjtzOjEwOiJERVRBSUxfVVJMIjtzOjA6IiI7czoyMDoiRElTUExBWV9CT1RUT01fUEFHRVIiO3M6MToiWSI7czoxNzoiRElTUExBWV9UT1BfUEFHRVIiO3M6MToiTiI7czoxODoiRUxFTUVOVF9TT1JUX0ZJRUxEIjtzOjQ6InNvcnQiO3M6MTk6IkVMRU1FTlRfU09SVF9GSUVMRDIiO3M6MjoiaWQiO3M6MTg6IkVMRU1FTlRfU09SVF9PUkRFUiI7czo0OiJkZXNjIjtzOjE5OiJFTEVNRU5UX1NPUlRfT1JERVIyIjtzOjQ6ImRlc2MiO3M6MTE6IkZJTFRFUl9OQU1FIjtzOjExOiJ0cmVuZEZpbHRlciI7czoxODoiSElERV9OT1RfQVZBSUxBQkxFIjtzOjE6Ik4iO3M6OToiSUJMT0NLX0lEIjtzOjE6IjIiO3M6MTE6IklCTE9DS19UWVBFIjtzOjc6ImNhdGFsb2ciO3M6MTQ6IklCTE9DS19UWVBFX0lEIjtzOjc6ImNhdGFsb2ciO3M6MTk6IklOQ0xVREVfU1VCU0VDVElPTlMiO3M6MToiWSI7czoxMDoiTEFCRUxfUFJPUCI7YToxOntpOjA7czoxMDoiTkVXUFJPRFVDVCI7fXM6MTg6IkxJTkVfRUxFTUVOVF9DT1VOVCI7czoxOiIzIjtzOjExOiJNRVNTQUdFXzQwNCI7czowOiIiO3M6MjI6Ik1FU1NfQlROX0FERF9UT19CQVNLRVQiO3M6MTc6ItCSINC60L7RgNC30LjQvdGDIjtzOjEyOiJNRVNTX0JUTl9CVVkiO3M6MTI6ItCa0YPQv9C40YLRjCI7czoxNToiTUVTU19CVE5fREVUQUlMIjtzOjE4OiLQn9C+0LTRgNC+0LHQvdC10LUiO3M6MTg6Ik1FU1NfQlROX1NVQlNDUklCRSI7czoyMjoi0J/QvtC00L/QuNGB0LDRgtGM0YHRjyI7czoxODoiTUVTU19OT1RfQVZBSUxBQkxFIjtzOjI0OiLQndC10YIg0LIg0L3QsNC70LjRh9C40LgiO3M6MTY6Ik1FVEFfREVTQ1JJUFRJT04iO3M6MToiLSI7czoxMzoiTUVUQV9LRVlXT1JEUyI7czoxOiItIjtzOjIyOiJPRkZFUlNfQ0FSVF9QUk9QRVJUSUVTIjthOjM6e2k6MDtzOjk6IkNPTE9SX1JFRiI7aToxO3M6MTE6IlNJWkVTX1NIT0VTIjtpOjI7czoxMzoiU0laRVNfQ0xPVEhFUyI7fXM6MTc6Ik9GRkVSU19GSUVMRF9DT0RFIjthOjI6e2k6MDtzOjA6IiI7aToxO3M6MDoiIjt9czoyMDoiT0ZGRVJTX1BST1BFUlRZX0NPREUiO2E6NDp7aTowO3M6OToiQ09MT1JfUkVGIjtpOjE7czoxMToiU0laRVNfU0hPRVMiO2k6MjtzOjEzOiJTSVpFU19DTE9USEVTIjtpOjM7czowOiIiO31zOjE3OiJPRkZFUlNfU09SVF9GSUVMRCI7czo0OiJzb3J0IjtzOjE4OiJPRkZFUlNfU09SVF9GSUVMRDIiO3M6MjoiaWQiO3M6MTc6Ik9GRkVSU19TT1JUX09SREVSIjtzOjQ6ImRlc2MiO3M6MTg6Ik9GRkVSU19TT1JUX09SREVSMiI7czo0OiJkZXNjIjtzOjE5OiJPRkZFUl9BRERfUElDVF9QUk9QIjtzOjE6Ii0iO3M6MTY6Ik9GRkVSX1RSRUVfUFJPUFMiO2E6Mzp7aTowO3M6OToiQ09MT1JfUkVGIjtpOjE7czoxMToiU0laRVNfU0hPRVMiO2k6MjtzOjEzOiJTSVpFU19DTE9USEVTIjt9czoyMjoiUEFHRVJfQkFTRV9MSU5LX0VOQUJMRSI7czoxOiJOIjtzOjIwOiJQQUdFUl9ERVNDX05VTUJFUklORyI7czoxOiJOIjtzOjMxOiJQQUdFUl9ERVNDX05VTUJFUklOR19DQUNIRV9USU1FIjtzOjU6IjM2MDAwIjtzOjE0OiJQQUdFUl9TSE9XX0FMTCI7czoxOiJOIjtzOjE3OiJQQUdFUl9TSE9XX0FMV0FZUyI7czoxOiJOIjtzOjE0OiJQQUdFUl9URU1QTEFURSI7czo1OiJyb3VuZCI7czoxMToiUEFHRVJfVElUTEUiO3M6MTI6ItCi0L7QstCw0YDRiyI7czoxODoiUEFHRV9FTEVNRU5UX0NPVU5UIjtzOjI6IjEyIjtzOjI2OiJQQVJUSUFMX1BST0RVQ1RfUFJPUEVSVElFUyI7czoxOiJOIjtzOjEwOiJQUklDRV9DT0RFIjthOjE6e2k6MDtzOjQ6IkJBU0UiO31zOjE3OiJQUklDRV9WQVRfSU5DTFVERSI7czoxOiJZIjtzOjIwOiJQUk9EVUNUX0RJU1BMQVlfTU9ERSI7czoxOiJZIjtzOjE5OiJQUk9EVUNUX0lEX1ZBUklBQkxFIjtzOjI6ImlkIjtzOjE4OiJQUk9EVUNUX1BST1BFUlRJRVMiO2E6MDp7fXM6MjI6IlBST0RVQ1RfUFJPUFNfVkFSSUFCTEUiO3M6NDoicHJvcCI7czoyNToiUFJPRFVDVF9RVUFOVElUWV9WQVJJQUJMRSI7czowOiIiO3M6MjA6IlBST0RVQ1RfU1VCU0NSSVBUSU9OIjtzOjE6Ik4iO3M6MTM6IlBST1BFUlRZX0NPREUiO2E6Mjp7aTowO3M6MTA6Ik5FV1BST0RVQ1QiO2k6MTtzOjA6IiI7fXM6MTI6IlNFQ1RJT05fQ09ERSI7czowOiIiO3M6MTA6IlNFQ1RJT05fSUQiO047czoxOToiU0VDVElPTl9JRF9WQVJJQUJMRSI7czoxMDoiU0VDVElPTl9JRCI7czoxMToiU0VDVElPTl9VUkwiO3M6MDoiIjtzOjE5OiJTRUNUSU9OX1VTRVJfRklFTERTIjthOjI6e2k6MDtzOjA6IiI7aToxO3M6MDoiIjt9czo4OiJTRUZfTU9ERSI7czoxOiJOIjtzOjE3OiJTRVRfQlJPV1NFUl9USVRMRSI7czoxOiJZIjtzOjE3OiJTRVRfTEFTVF9NT0RJRklFRCI7czoxOiJOIjtzOjIwOiJTRVRfTUVUQV9ERVNDUklQVElPTiI7czoxOiJZIjtzOjE3OiJTRVRfTUVUQV9LRVlXT1JEUyI7czoxOiJZIjtzOjE0OiJTRVRfU1RBVFVTXzQwNCI7czoxOiJOIjtzOjk6IlNFVF9USVRMRSI7czoxOiJZIjtzOjg6IlNIT1dfNDA0IjtzOjE6Ik4iO3M6MTk6IlNIT1dfQUxMX1dPX1NFQ1RJT04iO3M6MToiWSI7czoxNjoiU0hPV19DTE9TRV9QT1BVUCI7czoxOiJOIjtzOjIxOiJTSE9XX0RJU0NPVU5UX1BFUkNFTlQiO3M6MToiTiI7czoxNDoiU0hPV19PTERfUFJJQ0UiO3M6MToiWSI7czoxNjoiU0hPV19QUklDRV9DT1VOVCI7czoxOiIxIjtzOjE0OiJURU1QTEFURV9USEVNRSI7czo0OiJzaXRlIjtzOjI0OiJVU0VfTUFJTl9FTEVNRU5UX1NFQ1RJT04iO3M6MToiTiI7czoxNToiVVNFX1BSSUNFX0NPVU5UIjtzOjE6Ik4iO3M6MjA6IlVTRV9QUk9EVUNUX1FVQU5USVRZIjtzOjE6Ik4iO3M6MTc6IkNVUlJFTlRfQkFTRV9QQUdFIjtzOjE6Ii8iO3M6MTM6IkdMT0JBTF9GSUxURVIiO2E6MTp7czoxNDoiUFJPUEVSVFlfVFJFTkQiO3M6MToiNCI7fX0=.8dab50057780daecfc3e26dae483235c8d6464e00213722f0712be743b66fa36',
+              container: 'container-1'
+            });
+          </script>
+          <script>
+            BX.Currency.setCurrencies([{
+              'CURRENCY': 'BYN',
+              'FORMAT': {
+                'FORMAT_STRING': '# руб.',
+                'DEC_POINT': '.',
+                'THOUSANDS_SEP': ' ',
+                'DECIMALS': 2,
+                'THOUSANDS_VARIANT': 'S',
+                'HIDE_ZERO': 'Y'
+              }
+            }, {
+              'CURRENCY': 'EUR',
+              'FORMAT': {
+                'FORMAT_STRING': '&euro;#',
+                'DEC_POINT': '.',
+                'THOUSANDS_SEP': ',',
+                'DECIMALS': 2,
+                'THOUSANDS_VARIANT': 'C',
+                'HIDE_ZERO': 'Y'
+              }
+            }, {
+              'CURRENCY': 'RUB',
+              'FORMAT': {
+                'FORMAT_STRING': '# руб.',
+                'DEC_POINT': '.',
+                'THOUSANDS_SEP': ' ',
+                'DECIMALS': 2,
+                'THOUSANDS_VARIANT': 'S',
+                'HIDE_ZERO': 'Y'
+              }
+            }, {
+              'CURRENCY': 'UAH',
+              'FORMAT': {
+                'FORMAT_STRING': '# грн.',
+                'DEC_POINT': '.',
+                'THOUSANDS_SEP': ' ',
+                'DECIMALS': 2,
+                'THOUSANDS_VARIANT': 'S',
+                'HIDE_ZERO': 'Y'
+              }
+            }, {
+              'CURRENCY': 'USD',
+              'FORMAT': {
+                'FORMAT_STRING': '$#',
+                'DEC_POINT': '.',
+                'THOUSANDS_SEP': ',',
+                'DECIMALS': 2,
+                'THOUSANDS_VARIANT': 'C',
+                'HIDE_ZERO': 'Y'
+              }
+            }]);
+          </script>
+        </div>
+
+
+        
+      </div>
+      <div class="row">
+		<div class="container col-md-12 col-sm-12">
+			<h2>Вебинары</h2>
+			<div class="row">
+				<div class="bx-newslist-container col-sm-6 col-md-3" id="bx_3218110189_2">
+		        <div class="bx-newslist-block">
+		          <div class="bx-newslist-img">
+		            <a href="http://proandro-webinar.logicasoft.pro/news/estrogen-deficiency-impairs-respiratory-function/"><img
+		                    src="http://proandro-webinar.logicasoft.pro/upload/resize_cache/iblock/fa6/220_136_2/fa6b9b60e2f79af0b832dc4c08c4d0b3.jpg"
+		                    width="220"
+		                    height="136"
+		                    alt="Дефицит эстрогенов ухудшает функцию внешнего дыхания"
+		                    title="Дефицит эстрогенов ухудшает функцию внешнего дыхания"
+		            /></a>
+		          </div>
+		          <h3 class="bx-newslist-title">
+		            <a href="http://proandro-webinar.logicasoft.pro/news/estrogen-deficiency-impairs-respiratory-function/">Дефицит
+		              эстрогенов ухудшает функцию внешнего дыхания</a>
+		          </h3>
+		          <div class="bx-newslist-content">
+		            У женщин в период менопаузы наблюдается ускоренное снижение функции внешнего дыхания (ФВД), в результате
+		            жизненная емкос...
+		          </div>
+		          <div class="row">
+		            <div class="col-xs-5">
+		              <div class="bx-newslist-date"><i class="fa fa-calendar-o"></i> 20.07.2018</div>
+		            </div>
+		          </div>
+		          <div class="row">
+		            <div class="col-xs-5">
+		              <div class="bx-newslist-more"><a class="btn btn-primary btn-xs"
+		                                               href="http://proandro-webinar.logicasoft.pro/news/estrogen-deficiency-impairs-respiratory-function/">Подробнее</a>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="bx-newslist-container col-sm-6 col-md-3" id="bx_3218110189_1">
+		        <div class="bx-newslist-block">
+		          <div class="bx-newslist-img">
+		            <a href="http://proandro-webinar.logicasoft.pro/news/sulfonylurea-and-fractures/"><img
+		                    src="http://proandro-webinar.logicasoft.pro/upload/resize_cache/iblock/2f4/220_136_2/2f4de21c3cf60a62d1a42d1e0e699de4.jpg"
+		                    width="220"
+		                    height="136"
+		                    alt="Сульфонилмочевина и переломы"
+		                    title="Сульфонилмочевина и переломы"
+		            /></a>
+		          </div>
+		          <h3 class="bx-newslist-title">
+		            <a href="http://proandro-webinar.logicasoft.pro/news/sulfonylurea-and-fractures/">Сульфонилмочевина и
+		              переломы</a>
+		          </h3>
+		          <div class="bx-newslist-content">
+		            Недостаточная эффективность пероральных сахароснижающих препаратов широко известна всем практическим
+		            эндокринологам.
+		          </div>
+		          <div class="row">
+		          </div>
+		          <div class="row">
+		            <div class="col-xs-5">
+		              <div class="bx-newslist-more"><a class="btn btn-primary btn-xs"
+		                                               href="http://proandro-webinar.logicasoft.pro/news/sulfonylurea-and-fractures/">Подробнее</a>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="bx-newslist-container col-sm-6 col-md-3" id="bx_3218110189_2">
+		        <div class="bx-newslist-block">
+		          <div class="bx-newslist-img">
+		            <a href="http://proandro-webinar.logicasoft.pro/news/estrogen-deficiency-impairs-respiratory-function/"><img
+		                    src="http://proandro-webinar.logicasoft.pro/upload/resize_cache/iblock/fa6/220_136_2/fa6b9b60e2f79af0b832dc4c08c4d0b3.jpg"
+		                    width="220"
+		                    height="136"
+		                    alt="Дефицит эстрогенов ухудшает функцию внешнего дыхания"
+		                    title="Дефицит эстрогенов ухудшает функцию внешнего дыхания"
+		            /></a>
+		          </div>
+		          <h3 class="bx-newslist-title">
+		            <a href="http://proandro-webinar.logicasoft.pro/news/estrogen-deficiency-impairs-respiratory-function/">Дефицит
+		              эстрогенов ухудшает функцию внешнего дыхания</a>
+		          </h3>
+		          <div class="bx-newslist-content">
+		            У женщин в период менопаузы наблюдается ускоренное снижение функции внешнего дыхания (ФВД), в результате
+		            жизненная емкос...
+		          </div>
+		          <div class="row">
+		            <div class="col-xs-5">
+		              <div class="bx-newslist-date"><i class="fa fa-calendar-o"></i> 20.07.2018</div>
+		            </div>
+		          </div>
+		          <div class="row">
+		            <div class="col-xs-5">
+		              <div class="bx-newslist-more"><a class="btn btn-primary btn-xs"
+		                                               href="http://proandro-webinar.logicasoft.pro/news/estrogen-deficiency-impairs-respiratory-function/">Подробнее</a>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="bx-newslist-container col-sm-6 col-md-3" id="bx_3218110189_1">
+		        <div class="bx-newslist-block">
+		          <div class="bx-newslist-img">
+		            <a href="http://proandro-webinar.logicasoft.pro/news/sulfonylurea-and-fractures/"><img
+		                    src="http://proandro-webinar.logicasoft.pro/upload/resize_cache/iblock/2f4/220_136_2/2f4de21c3cf60a62d1a42d1e0e699de4.jpg"
+		                    width="220"
+		                    height="136"
+		                    alt="Сульфонилмочевина и переломы"
+		                    title="Сульфонилмочевина и переломы"
+		            /></a>
+		          </div>
+		          <h3 class="bx-newslist-title">
+		            <a href="http://proandro-webinar.logicasoft.pro/news/sulfonylurea-and-fractures/">Сульфонилмочевина и
+		              переломы</a>
+		          </h3>
+		          <div class="bx-newslist-content">
+		            Недостаточная эффективность пероральных сахароснижающих препаратов широко известна всем практическим
+		            эндокринологам.
+		          </div>
+		          <div class="row">
+		          </div>
+		          <div class="row">
+		            <div class="col-xs-5">
+		              <div class="bx-newslist-more"><a class="btn btn-primary btn-xs"
+		                                               href="http://proandro-webinar.logicasoft.pro/news/sulfonylurea-and-fractures/">Подробнее</a>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+			</div>
+			</div>
+	      	
+		  
+	  </div>
+    </div>
+  </div>
+</div><!--//container bx-content-seection-->
+</div><!--//workarea-->
+
+<footer class="bx-footer">
+
+  <div class="bx-footer-section container bx-center-section">
+    <div class="col-sm-5 col-md-3 col-md-push-6">
+      <h4 class="bx-block-title"></h4>
+      <nav class="bx-inclinksfooter-container">
+        <ul class="bx-inclinksfooter-list">
+          <li class="bx-inclinksfooter-item"><a href="http://proandro-webinar.logicasoft.pro/news/">Новости</a></li>
+          <li class="bx-inclinksfooter-item"><a href="http://proandro-webinar.logicasoft.pro/about/howto/">Как
+            оплатить</a></li>
+          <li class="bx-inclinksfooter-item"><a
+                  href="http://proandro-webinar.logicasoft.pro/about/contacts/">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-sm-5 col-md-3">
+      <nav class="bx-inclinksfooter-container">
+        <ul class="bx-inclinksfooter-list">
+          <li class="bx-inclinksfooter-item"><a href="http://proandro-webinar.logicasoft.pro/catalog/">Вебинары</a></li>
+          <li class="bx-inclinksfooter-item"><a href="http://proandro-webinar.logicasoft.pro/news/">Печатные
+            материалы</a></li>
+          <li class="bx-inclinksfooter-item"><a href="http://proandro-webinar.logicasoft.pro/about-the-lecturer/">О
+            лекторах</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-sm-5 col-md-3 col-md-push-3">
+      <div class="subscribe">
+        <div class="bx-subscribe">
+          <div class="bx-subscribe" id="sender-subscribe">
+
+            <script>
+              (function () {
+                var btn = BX('bx_subscribe_btn_i0tFNu');
+                var form = BX('bx_subscribe_subform_i0tFNu');
+                
+                if (!btn) {
+                  return;
+                }
+                
+                function mailSender() {
+                  setTimeout(function () {
+                    if (!btn) {
+                      return;
+                    }
+                    
+                    var btn_span = btn.querySelector("span");
+                    var btn_subscribe_width = btn_span.style.width;
+                    BX.addClass(btn, "send");
+                    btn_span.outterHTML = "<span><i class='fa fa-check'></i> ГОТОВО</span>";
+                    if (btn_subscribe_width) {
+                      btn.querySelector("span").style["min-width"] = btn_subscribe_width + "px";
+                    }
+                  }, 400);
+                }
+                
+                BX.ready(function () {
+                  BX.bind(btn, 'click', function () {
+                    setTimeout(mailSender, 250);
+                    return false;
+                  });
+                });
+                
+                BX.bind(form, 'submit', function () {
+                  btn.disabled = true;
+                  setTimeout(function () {
+                    btn.disabled = false;
+                  }, 2000);
+                  
+                  return true;
+                });
+              })();
+            </script>
+
+              <div class="bx_subscribe_submit_container">
+                <button class="btn" id="bx_subscribe_btn_i0tFNu">
+                	<span>Подписаться</span>
+                	<span>на рассылку</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="bx-composite-banner" style="padding-top: 20px"></div>
+    </div>
+    <div class="col-sm-5 col-md-3 col-md-pull-9">
+      <div class="bx-inclogofooter">
+        <div class="bx-inclogofooter-block">
+          <a class="bx-inclogofooter-logo" href="http://proandro-webinar.logicasoft.pro/">
+            <img alt="logokk.png"
+                 src="img/logo.png"
+                 title="logokk.png"> </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="bx-footer-bottomline">
+    <div class="bx-footer-section container">
+      <div class="col-sm-6">©&nbsp;Клиника профессора Калинченко 2010 - 2018</div>
+      <div class="col-sm-6 bx-up"><a href="javascript:void(0)" data-role="eshopUpButton"><i class="fa fa-caret-up"></i>
+        Наверх</a></div>
+    </div>
+  </div>
+
+
+</footer>
+<div class="col-xs-12 hidden-lg hidden-md hidden-sm">
+  <script>
+    var bx_basketT0kNhm = new BitrixSmallCart;
+  </script>
+  <div id="bx_basketT0kNhm" class="bx-basket-fixed right bottom">
+    <div class="bx-hdr-profile">
+      <div class="bx-basket-block"><i class="fa fa-shopping-cart"></i>
+        <a href="http://proandro-webinar.logicasoft.pro/personal/cart/">Корзина</a></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    bx_basketT0kNhm.siteId = 's1';
+    bx_basketT0kNhm.cartId = 'bx_basketT0kNhm';
+    bx_basketT0kNhm.ajaxPath = 'http://proandro-webinar.logicasoft.pro/bitrix/components/bitrix/sale.basket.basket.line/ajax.php';
+    bx_basketT0kNhm.templateName = '.default';
+    bx_basketT0kNhm.arParams = {
+      'PATH_TO_BASKET': 'http://proandro-webinar.logicasoft.pro/personal/cart/',
+      'PATH_TO_PERSONAL': 'http://proandro-webinar.logicasoft.pro/personal/',
+      'SHOW_PERSONAL_LINK': 'N',
+      'SHOW_NUM_PRODUCTS': 'Y',
+      'SHOW_TOTAL_PRICE': 'Y',
+      'SHOW_PRODUCTS': 'N',
+      'POSITION_FIXED': 'Y',
+      'POSITION_HORIZONTAL': 'right',
+      'POSITION_VERTICAL': 'bottom',
+      'SHOW_AUTHOR': 'Y',
+      'PATH_TO_REGISTER': 'http://proandro-webinar.logicasoft.pro/login/',
+      'PATH_TO_PROFILE': 'http://proandro-webinar.logicasoft.pro/personal/',
+      'CACHE_TYPE': 'A',
+      'PATH_TO_ORDER': 'http://proandro-webinar.logicasoft.pro/personal/order/make/',
+      'HIDE_ON_BASKET_PAGES': 'Y',
+      'SHOW_EMPTY_VALUES': 'Y',
+      'SHOW_REGISTRATION': 'Y',
+      'PATH_TO_AUTHORIZE': 'http://proandro-webinar.logicasoft.pro/login/',
+      'SHOW_DELAY': 'Y',
+      'SHOW_NOTAVAIL': 'Y',
+      'SHOW_IMAGE': 'Y',
+      'SHOW_PRICE': 'Y',
+      'SHOW_SUMMARY': 'Y',
+      'AJAX': 'N',
+      '~PATH_TO_BASKET': 'http://proandro-webinar.logicasoft.pro/personal/cart/',
+      '~PATH_TO_PERSONAL': 'http://proandro-webinar.logicasoft.pro/personal/',
+      '~SHOW_PERSONAL_LINK': 'N',
+      '~SHOW_NUM_PRODUCTS': 'Y',
+      '~SHOW_TOTAL_PRICE': 'Y',
+      '~SHOW_PRODUCTS': 'N',
+      '~POSITION_FIXED': 'Y',
+      '~POSITION_HORIZONTAL': 'right',
+      '~POSITION_VERTICAL': 'bottom',
+      '~SHOW_AUTHOR': 'Y',
+      '~PATH_TO_REGISTER': 'http://proandro-webinar.logicasoft.pro/login/',
+      '~PATH_TO_PROFILE': 'http://proandro-webinar.logicasoft.pro/personal/',
+      '~CACHE_TYPE': 'A',
+      '~PATH_TO_ORDER': 'http://proandro-webinar.logicasoft.pro/personal/order/make/',
+      '~HIDE_ON_BASKET_PAGES': 'Y',
+      '~SHOW_EMPTY_VALUES': 'Y',
+      '~SHOW_REGISTRATION': 'Y',
+      '~PATH_TO_AUTHORIZE': 'http://proandro-webinar.logicasoft.pro/login/',
+      '~SHOW_DELAY': 'Y',
+      '~SHOW_NOTAVAIL': 'Y',
+      '~SHOW_IMAGE': 'Y',
+      '~SHOW_PRICE': 'Y',
+      '~SHOW_SUMMARY': 'Y',
+      '~AJAX': 'N',
+      'cartId': 'bx_basketT0kNhm'
+    }; // TODO \Bitrix\Main\Web\Json::encode
+    bx_basketT0kNhm.closeMessage = 'Скрыть';
+    bx_basketT0kNhm.openMessage = 'Раскрыть';
+    bx_basketT0kNhm.activate();
+  </script>
+</div>
+</div> <!-- //bx-wrapper -->
+
+
+<script>
+  BX.ready(function () {
+    var upButton = document.querySelector('[data-role="eshopUpButton"]');
+    BX.bind(upButton, "click", function () {
+      var windowScroll = BX.GetWindowScrollPos();
+      (new BX.easing({
+        duration: 500,
+        start: {scroll: windowScroll.scrollTop},
+        finish: {scroll: 0},
+        transition: BX.easing.makeEaseOut(BX.easing.transitions.quart),
+        step: function (state) {
+          window.scrollTo(0, state.scroll);
+        },
+        complete: function () {
+        }
+      })).animate();
+    })
+  });
+</script>
+
+</body>
+</html><!--2e5baf6fae9c508085462505b0b1a071-->

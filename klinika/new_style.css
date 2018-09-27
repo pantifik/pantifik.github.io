@@ -1,0 +1,134 @@
+body,
+p{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    color: #d83040;
+
+}
+
+.bx-top-nav-container,
+.bx-inclinksfooter-container{
+	font-family: 'Roboto', sans-serif;
+}
+
+.bx-content-seection,
+.bx-header-section{
+	border: none;
+}
+
+.header-title {
+	margin-top: 0;
+	font-size: 18px;
+}
+
+.bx-worktime-prop p,
+.bx-inclinksfooter-item{
+	text-transform: uppercase;
+}
+
+.text-red,
+.bx-inc-orginfo-phone i {
+	color: #d83040;
+}
+
+.bx-logo{
+	padding: 0;
+	margin: 0;
+}
+
+.bx-hdr-profile .btn{
+	display: block;
+	background-color: #d83040;
+
+	border-radius: none: 
+}
+
+.bx-basket-block a{
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+
+	border-bottom: none;
+}
+
+
+
+.bx-green.bx-top-nav .bx-top-nav-container{
+	background-color: #fff;
+}
+
+.bx-top-nav-container .bx-nav-1-lvl > a{
+	color: #333333;
+}
+
+.bx-green.bx-top-nav .bx-top-nav-container .bx-nav-1-lvl.bx-hover > a, .bx-green.bx-top-nav .bx-top-nav-container .bx-nav-1-lvl.bx-active > a, .bx-green.bx-top-nav .bx-top-nav-container .bx-nav-1-lvl:hover > a{
+	background-color: #d83040;
+	color: #fff;
+}
+
+
+
+.product-item-image-wrapper{
+	padding-top: 70%;
+}
+
+.bx-newslist-block{
+	padding: 0;
+}
+
+.bx-newslist-img img{
+	width: 100%;
+}
+
+.bx-footer{
+	background: none;
+	color: #333333;
+}
+
+.bx-inclogofooter,
+.bx-inclogofooter-tel,
+.bx-inclogofooter-worktime,
+.bx-footer a,
+.bx-footer a:hover{
+	color: #333333;
+}
+
+.subscribe{
+	background-image: url(img/subscribe_bg.svg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 175px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.subscribe .btn{
+	background: none;
+	color: #ffffff;
+}
+
+.subscribe .btn span{
+	display: block;
+}
+.subscribe .btn span:first-child{
+	text-transform: uppercase;
+}
+
+.bx-inclogofooter-logo, 
+.bx-inclogofooter-logo img{
+	width: 100%;
+}
+
+.bx-footer-section.bx-center-section{
+
+	padding-top: 0;
+}
