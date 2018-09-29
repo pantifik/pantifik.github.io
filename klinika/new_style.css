@@ -1,7 +1,11 @@
+body{
+    background-color: #ffffff;
+}
+
 body,
 p{
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 h2, h3, h4, h5, h6 {
@@ -9,86 +13,210 @@ h2, h3, h4, h5, h6 {
     font-weight: 300;
 
     color: #d83040;
-
 }
 
 .bx-top-nav-container,
 .bx-inclinksfooter-container{
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .bx-content-seection,
 .bx-header-section{
-	border: none;
+    border: none;
 }
 
 .header-title {
-	margin-top: 0;
-	font-size: 18px;
+    margin-top: 0;
+    font-size: 18px;
 }
 
 .bx-worktime-prop p,
 .bx-inclinksfooter-item{
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .text-red,
 .bx-inc-orginfo-phone i {
-	color: #d83040;
+    color: #d83040;
 }
 
 .bx-logo{
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .bx-hdr-profile .btn{
-	display: block;
-	background-color: #d83040;
+    display: block;
+    background-color: #d83040;
 
-	border-radius: none: 
+    border-radius: none: 
 }
 
 .bx-basket-block a{
-	font-size: 14px;
-	text-decoration: none;
-	color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
 
-	border-bottom: none;
+    border-bottom: none;
 }
 
+.bx-searchtitle .bx-input-group-btn button{
+    background: none;
+    color: #333;
+    border: 1px solid #d5dadc;
+    font-size: 14px;
+}
 
+.bx-searchtitle .bx-input-group-btn button:hover{
+    background: #d83040;
+    color: #fff;
+}
+
+.bx-searchtitle .bx-input-group .bx-form-control{
+    background-color: inherit;
+}
 
 .bx-green.bx-top-nav .bx-top-nav-container{
-	background-color: #fff;
+    background-color: #fff;
 }
 
 .bx-top-nav-container .bx-nav-1-lvl > a{
-	color: #333333;
+    color: #333333;
 }
 
 .bx-green.bx-top-nav .bx-top-nav-container .bx-nav-1-lvl.bx-hover > a, .bx-green.bx-top-nav .bx-top-nav-container .bx-nav-1-lvl.bx-active > a, .bx-green.bx-top-nav .bx-top-nav-container .bx-nav-1-lvl:hover > a{
-	background-color: #d83040;
-	color: #fff;
+    background-color: #d83040;
+    color: #fff;
 }
 
+.section-title{
+    margin-bottom: 30px;
+}
 
+.product-item{
+    position: relative;
+    display: block;
+    min-height: 325px;
+    width: 100%;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #333333;
+
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.product-item-container{
+    margin-bottom: 10px;
+}
+
+.product-item-desc{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(255,255,255,.5);
+    padding: 15px;
+}
+
+.product-item-desc p{
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.product-item-title{
+    margin-top: 0;
+    font-size: 18px;
+    color: #000;
+}
+
+.product-item-subTitle{
+    padding-bottom: 15px;
+}
 
 .product-item-image-wrapper{
-	padding-top: 70%;
+    padding-top: 70%;
+}
+
+.publications-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bx-newslist-container{
+    margin-bottom: 50px;
 }
 
 .bx-newslist-block{
-	padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin-bottom: 0;
+    border: 1px solid #9a9a9a;
+}
+
+.bx-newslist-block > .row{
+    margin-top: auto;
 }
 
 .bx-newslist-img img{
-	width: 100%;
+    width: 100%;
+}
+
+.bx-newslist-desc{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bx-newslist-block .bx-newslist-more{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    margin-bottom: 0; 
+
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 2.7;
+    text-align: left;
+    color: #333
+}
+
+.bx-newslist-more i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    line-height: inherit;
+    display: block;
+    padding: 0 1em;
+    color: #d83040;
+}
+
+.bx-newslist-more:hover i{
+
+    background-color: #d83040;
+    color: #fff;
+}
+
+.bx-newslist-content{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
 }
 
 .bx-footer{
-	background: none;
-	color: #333333;
+    background: none;
+    color: #333333;
 }
 
 .bx-inclogofooter,
@@ -96,39 +224,99 @@ h2, h3, h4, h5, h6 {
 .bx-inclogofooter-worktime,
 .bx-footer a,
 .bx-footer a:hover{
-	color: #333333;
+    color: #333333;
 }
 
 .subscribe{
-	background-image: url(img/subscribe_bg.svg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 175px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+    background-image: url(img/subscribe_bg.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .subscribe .btn{
-	background: none;
-	color: #ffffff;
+    background: none;
+    color: #ffffff;
 }
 
 .subscribe .btn span{
-	display: block;
+    display: block;
 }
 .subscribe .btn span:first-child{
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .bx-inclogofooter-logo, 
 .bx-inclogofooter-logo img{
-	width: 100%;
+    width: 100%;
 }
 
 .bx-footer-section.bx-center-section{
+    padding-top: 0;
+}
 
-	padding-top: 0;
+.bx-inclinksfooter-container{
+    margin-top: 0;
+}
+
+
+
+.social-btn{
+    border: 1px solid #999999;
+    font-size: 18px;
+}
+
+.social-btn:hover{
+    border: 1px solid #000;
+}
+
+.social-btn a{
+    color: #999999;
+}
+
+.bx-footer a:hover{
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.bx-footer-left{
+    margin-top: 35px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.bx-footer-contacts{
+    margin-top: 35px;
+}
+
+
+@media(max-width:500px) {
+ .product-item-title,
+ .product-item-desc p {
+  font-size:15px;
+ }
+
+ .section-title{
+    font-size: 20px;
+ }
+}
+
+@media (min-width: 1200px) {
+    .bx-footer .container{
+        padding: 0 45px 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .social{
+        margin-bottom: 10px;
+    }
+    .bx-header-section {
+        padding: 15px 15px 10px
+    }
 }
