@@ -7,7 +7,6 @@ $(document).ready(function(){
     dots: true,
     dotsClass: 'slider__dots',
     customPaging : function(slider, i) {
-      console.log(slider);
       return '<span class="slider__dot"></span>';
     }
   });
@@ -30,7 +29,7 @@ $(document).ready(function(){
       balloonContentBody: '3-й гараж от пляжа'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: 'img/general/marker.png',
+      iconImageHref: 'img/general/marker.jpg',
       iconImageSize: [50, 70]
     });
   
