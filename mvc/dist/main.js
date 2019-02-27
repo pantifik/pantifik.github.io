@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! unsplash-js */ \"./node_modules/unsplash-js/lib/unsplash.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(unsplash_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model */ \"./js/model.js\");\n/* harmony import */ var _view__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view */ \"./js/view.js\");\n/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./controller */ \"./js/controller.js\");\n/* harmony import */ var _templates__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./templates */ \"./js/templates.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst unsplash = new unsplash_js__WEBPACK_IMPORTED_MODULE_0___default.a({\r\n  applicationId: \"a648727ceefb1f6631f97aa3e176c644fd6449f378d7527f19601555358da7ae\",\r\n  secret: \"cfed8222b1379678d0217f2ed136889d9dec5030457bec781fcf276c7f726f5c\"\r\n});\r\n\r\nlet el = document.getElementById('app');\r\n\r\nconst templates = new _templates__WEBPACK_IMPORTED_MODULE_4__[\"default\"]();\r\nconst view = new _view__WEBPACK_IMPORTED_MODULE_2__[\"default\"](el, templates);\r\nconst model = new _model__WEBPACK_IMPORTED_MODULE_1__[\"default\"](unsplash);\r\nconst controller = new _controller__WEBPACK_IMPORTED_MODULE_3__[\"default\"](view, model);\r\n\r\ncontroller.showCollections();\r\n\n\n//# sourceURL=webpack:///./js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_appModels__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./models/appModels */ \"./js/models/appModels.js\");\n/* harmony import */ var _views_appViews__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/appViews */ \"./js/views/appViews.js\");\n/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controller */ \"./js/controller.js\");\n\r\n\r\n\r\n\r\n\r\nconst controller = new _controller__WEBPACK_IMPORTED_MODULE_2__[\"default\"](_views_appViews__WEBPACK_IMPORTED_MODULE_1__[\"default\"], _models_appModels__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\r\n\r\ncontroller.showCollections();\r\n\n\n//# sourceURL=webpack:///./js/app.js?");
 
 /***/ }),
 
@@ -106,43 +106,139 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var unsp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Controller; });\nclass Controller {\r\n  constructor(view, model) {\r\n    this.model = model;\r\n    this.view = view;\r\n    \r\n    view.bindClick(({target}) => {\r\n      if(target.className === 'collections__item') {\r\n        \r\n        this.showCollection(target.dataset.id);\r\n  \r\n        let state = {\r\n          method: 'showCollection',\r\n          id: target.dataset.id\r\n        };\r\n        this.setLocation(state, `collection=${target.dataset.id}`)\r\n      }\r\n      if(target.className === 'collection__item') {\r\n        this.showImage(target.dataset.id);\r\n        \r\n        let state = {\r\n          method: 'showImage',\r\n          id: target.dataset.id\r\n        };\r\n        this.setLocation(state, `image=${target.dataset.id}`)\r\n      }\r\n      \r\n    });\r\n  \r\n    window.onpopstate = this.popStateHendler.bind(this);\r\n    \r\n    this.state = {};\r\n    this.state.collections = [];\r\n  }\r\n  showCollections() {\r\n    this.model.getCollections(this.view.viewCollections.bind(this.view))\r\n  }\r\n  showCollection(collectionId) {\r\n    this.model.getCollection( +collectionId, this.view.viewCollection.bind(this.view))\r\n  }\r\n  showImage(imageId) {\r\n    this.model.getImage(imageId, this.view.viewImage.bind(this.view))\r\n  }\r\n  \r\n  \r\n  setLocation(state, curLoc){\r\n    \r\n    history.pushState(state, null, curLoc);\r\n    console.log(history.state)\r\n  }\r\n  \r\n  popStateHendler({state}){\r\n    if(state) {\r\n      this[state.method](state.id);\r\n      return\r\n    }\r\n    this.showCollections();\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/controller.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Controller; });\n/* harmony import */ var _libs_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./libs/helpers */ \"./js/libs/helpers.js\");\n\r\n\r\nclass Controller {\r\n  constructor(views, models) {\r\n    this.models = models;\r\n    \r\n    this.views = views;\r\n    this.showCollectionsView = this.views.collections.show.bind(this.views.collections);\r\n    this.showCollectionView = this.views.collection.show.bind(this.views.collection);\r\n    this.showImgView = this.views.img.show.bind(this.views.img);\r\n    \r\n    views.collections.bindClick(({target}) => {\r\n      if(target.className === 'collections__item') {\r\n        let state = {\r\n          method: 'showCollection',\r\n          id: target.dataset.id\r\n        };\r\n        \r\n        this.showCollection(target.dataset.id);\r\n        Object(_libs_helpers__WEBPACK_IMPORTED_MODULE_0__[\"setLocation\"])(state, `collection=${target.dataset.id}`)\r\n      }\r\n      if(target.className === 'collection__item') {\r\n        let state = {\r\n          method: 'showImg',\r\n          id: target.dataset.id\r\n        };\r\n        \r\n        this.showImg(target.dataset.id);\r\n        Object(_libs_helpers__WEBPACK_IMPORTED_MODULE_0__[\"setLocation\"])(state, `image=${target.dataset.id}`)\r\n      }\r\n      \r\n    });\r\n  \r\n    window.onpopstate = this.popStateHendler.bind(this);\r\n  }\r\n  \r\n  \r\n  showCollections() {\r\n    this.models.collections.unsplashRequest(this.showCollectionsView)\r\n  }\r\n  showCollection(id) {\r\n    this.models.collection.unsplashRequest(id, this.showCollectionView)\r\n  }\r\n  showImg(id) {\r\n    this.models.img.unsplashRequest(id, this.showImgView)\r\n  }\r\n  \r\n  \r\n  \r\n  \r\n  popStateHendler({state}){\r\n    if(state) {\r\n      this[state.method](state.id);\r\n      return\r\n    }\r\n    this.showCollections();\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/controller.js?");
 
 /***/ }),
 
-/***/ "./js/model.js":
-/*!*********************!*\
-  !*** ./js/model.js ***!
-  \*********************/
+/***/ "./js/libs/helpers.js":
+/*!****************************!*\
+  !*** ./js/libs/helpers.js ***!
+  \****************************/
+/*! exports provided: setLocation */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setLocation\", function() { return setLocation; });\nfunction setLocation(state, curLoc){\r\n  history.pushState(state, null, curLoc);\r\n  console.log(history.state)\r\n}\n\n//# sourceURL=webpack:///./js/libs/helpers.js?");
+
+/***/ }),
+
+/***/ "./js/models/appModels.js":
+/*!********************************!*\
+  !*** ./js/models/appModels.js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Model; });\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! unsplash-js */ \"./node_modules/unsplash-js/lib/unsplash.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(unsplash_js__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nclass Model {\r\n  constructor(unsplash) {\r\n    this.unsplash = unsplash;\r\n  }\r\n  getCollections(resolve) {\r\n    return this.unsplash.collections.listCollections(1, 10, \"popular\")\r\n                  .then(unsplash_js__WEBPACK_IMPORTED_MODULE_0__[\"toJson\"])\r\n                  .then(json => {\r\n                    resolve(json);\r\n                    return json;\r\n                  });\r\n  }\r\n  getCollection(id, resolve) {\r\n    this.unsplash.collections.getCollectionPhotos(+id)\r\n            .then(unsplash_js__WEBPACK_IMPORTED_MODULE_0__[\"toJson\"])\r\n            .then(json => {\r\n              resolve(json);\r\n            });\r\n  }\r\n  getImage(id, resolve) {\r\n    this.unsplash.photos.getPhoto(id)\r\n            .then(unsplash_js__WEBPACK_IMPORTED_MODULE_0__[\"toJson\"])\r\n            .then(json => {\r\n              resolve(json);\r\n            });\r\n  }\r\n  \r\n  \r\n}\n\n//# sourceURL=webpack:///./js/model.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! unsplash-js */ \"./node_modules/unsplash-js/lib/unsplash.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(unsplash_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _collectionModel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./collectionModel */ \"./js/models/collectionModel.js\");\n/* harmony import */ var _collectionsModel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./collectionsModel */ \"./js/models/collectionsModel.js\");\n/* harmony import */ var _imgModel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./imgModel */ \"./js/models/imgModel.js\");\n\r\n\r\n\r\n\r\n\r\nconst unsplash = new unsplash_js__WEBPACK_IMPORTED_MODULE_0___default.a({\r\n  applicationId: \"a648727ceefb1f6631f97aa3e176c644fd6449f378d7527f19601555358da7ae\",\r\n  secret: \"cfed8222b1379678d0217f2ed136889d9dec5030457bec781fcf276c7f726f5c\"\r\n});\r\n\r\nconst collectionModel = new _collectionModel__WEBPACK_IMPORTED_MODULE_1__[\"default\"](unsplash);\r\nconst collectionsModel = new _collectionsModel__WEBPACK_IMPORTED_MODULE_2__[\"default\"](unsplash);\r\nconst imgModel = new _imgModel__WEBPACK_IMPORTED_MODULE_3__[\"default\"](unsplash);\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  collection: collectionModel,\r\n  collections: collectionsModel,\r\n  img: imgModel,\r\n});\n\n//# sourceURL=webpack:///./js/models/appModels.js?");
 
 /***/ }),
 
-/***/ "./js/templates.js":
-/*!*************************!*\
-  !*** ./js/templates.js ***!
-  \*************************/
+/***/ "./js/models/collectionModel.js":
+/*!**************************************!*\
+  !*** ./js/models/collectionModel.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Templates; });\nclass Templates{\r\n  collections(collections){\r\n    let html = '<h3 class=\"title\">collections</h3><ul id=\"collections\">';\r\n    collections.forEach((item) => {\r\n      html += `\r\n          <li>\r\n            <a href=\"#\" class=\"collections__item\" data-id=\"${item.id}\"> ${item.title} </a>\r\n          </li>`\r\n    });\r\n    html += '</ul>';\r\n    return html;\r\n  }\r\n  collection(collection){\r\n    let html = '<h3 class=\"title\">collection</h3><ul id=\"collection\">';\r\n    collection.forEach((item) => {\r\n      html += `\r\n          <li>\r\n            <a href=\"#\" class=\"collection__item\" data-id=\"${item.id}\"> ${item.description || 'noname'} </a>\r\n          </li>`\r\n    });\r\n    html += '</ul>';\r\n    return html;\r\n  }\r\n  image(imageData){\r\n    let html = '';\r\n  \r\n    html += `\r\n        <div class=\"image__box\">\r\n          <h3 class=\"image__title\">${imageData.description  || 'noname'}</h3>\r\n          <img src=\"${imageData.urls.small}\">\r\n          <div class=\"image__info\">\r\n          <p class=\"image__row\"><span>User.name:</span> ${imageData.user.name}</p>\r\n          <p class=\"image__row\"><span>created_at:</span> ${imageData.created_at}</p>\r\n          <p class=\"image__row\"><span>downloads:</span> ${imageData.downloads}</p>\r\n</div>\r\n</div>\r\n          `;\r\n    html += '';\r\n    return html;\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/templates.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return CollectionsModel; });\n/* harmony import */ var _modelSuper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modelSuper */ \"./js/models/modelSuper.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! unsplash-js */ \"./node_modules/unsplash-js/lib/unsplash.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(unsplash_js__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nclass CollectionsModel extends _modelSuper__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n  unsplashRequest(id, resolve) {\r\n    this.unsplash.collections.getCollectionPhotos(+id)\r\n        .then(unsplash_js__WEBPACK_IMPORTED_MODULE_1__[\"toJson\"])\r\n        .then(json => {\r\n          resolve(json);\r\n        });\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/models/collectionModel.js?");
 
 /***/ }),
 
-/***/ "./js/view.js":
-/*!********************!*\
-  !*** ./js/view.js ***!
-  \********************/
+/***/ "./js/models/collectionsModel.js":
+/*!***************************************!*\
+  !*** ./js/models/collectionsModel.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return View; });\n\r\nclass View{\r\n  constructor(parent, templates) {\r\n    this.parent = parent;\r\n    this.templates = templates;\r\n  }\r\n  viewCollections(collections) {\r\n    this.render(this.templates.collections(collections));\r\n  }\r\n  viewCollection(collection) {\r\n    \r\n    this.render(this.templates.collection(collection));\r\n  }\r\n  viewImage(imageData) {\r\n    \r\n    this.render(this.templates.image(imageData));\r\n  }\r\n  \r\n  bindClick(hendler){\r\n    this.parent.addEventListener('click', (e) => {\r\n      e.preventDefault();\r\n      hendler(e)\r\n    })\r\n  }\r\n  \r\n  render(view) {\r\n    this.parent.innerHTML = view;\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/view.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return CollectionsModel; });\n/* harmony import */ var _modelSuper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modelSuper */ \"./js/models/modelSuper.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! unsplash-js */ \"./node_modules/unsplash-js/lib/unsplash.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(unsplash_js__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nclass CollectionsModel extends _modelSuper__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n  unsplashRequest(resolve) {\r\n    return this.unsplash.collections.listCollections(1, 10, \"popular\")\r\n               .then(unsplash_js__WEBPACK_IMPORTED_MODULE_1__[\"toJson\"])\r\n               .then(json => {\r\n                 resolve(json);\r\n                 return json;\r\n               });\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/models/collectionsModel.js?");
+
+/***/ }),
+
+/***/ "./js/models/imgModel.js":
+/*!*******************************!*\
+  !*** ./js/models/imgModel.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return CollectionsModel; });\n/* harmony import */ var _modelSuper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modelSuper */ \"./js/models/modelSuper.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! unsplash-js */ \"./node_modules/unsplash-js/lib/unsplash.js\");\n/* harmony import */ var unsplash_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(unsplash_js__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nclass CollectionsModel extends _modelSuper__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n  unsplashRequest(id, resolve) {\r\n    this.unsplash.photos.getPhoto(id)\r\n        .then(unsplash_js__WEBPACK_IMPORTED_MODULE_1__[\"toJson\"])\r\n        .then(json => {\r\n          resolve(json);\r\n        });\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/models/imgModel.js?");
+
+/***/ }),
+
+/***/ "./js/models/modelSuper.js":
+/*!*********************************!*\
+  !*** ./js/models/modelSuper.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ModelSuper; });\nclass ModelSuper {\r\n  constructor(unsplash) {\r\n    this.unsplash = unsplash;\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/models/modelSuper.js?");
+
+/***/ }),
+
+/***/ "./js/views/appViews.js":
+/*!******************************!*\
+  !*** ./js/views/appViews.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _collectionsView__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collectionsView */ \"./js/views/collectionsView.js\");\n/* harmony import */ var _collectionView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./collectionView */ \"./js/views/collectionView.js\");\n/* harmony import */ var _imgView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./imgView */ \"./js/views/imgView.js\");\n\r\n\r\n\r\n\r\nconst el = document.getElementById('app');\r\n\r\nconst collectionsView = new _collectionsView__WEBPACK_IMPORTED_MODULE_0__[\"default\"](el, 'Список коллекций', 'collections');\r\nconst collectionView = new _collectionView__WEBPACK_IMPORTED_MODULE_1__[\"default\"](el, 'Список фотографий', 'collection');\r\nconst imgView = new _imgView__WEBPACK_IMPORTED_MODULE_2__[\"default\"](el, '', 'image');\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  collections: collectionsView,\r\n  collection: collectionView,\r\n  img: imgView,\r\n});\n\n//# sourceURL=webpack:///./js/views/appViews.js?");
+
+/***/ }),
+
+/***/ "./js/views/collectionView.js":
+/*!************************************!*\
+  !*** ./js/views/collectionView.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return CollectionView; });\n/* harmony import */ var _view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view */ \"./js/views/view.js\");\n\r\n\r\nclass CollectionView extends _view__WEBPACK_IMPORTED_MODULE_0__[\"default\"]{\r\n  _createView(collections){\r\n    let html = this._titleHTML();\r\n    html += `<ul>`;\r\n    collections.forEach((item) => {\r\n      html += this._itemHTML(item.id, item.description)\r\n    });\r\n    html += '</ul>';\r\n    return html;\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/views/collectionView.js?");
+
+/***/ }),
+
+/***/ "./js/views/collectionsView.js":
+/*!*************************************!*\
+  !*** ./js/views/collectionsView.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return CollectionsView; });\n/* harmony import */ var _view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view */ \"./js/views/view.js\");\n\r\n\r\nclass CollectionsView extends _view__WEBPACK_IMPORTED_MODULE_0__[\"default\"]{\r\n\r\n}\n\n//# sourceURL=webpack:///./js/views/collectionsView.js?");
+
+/***/ }),
+
+/***/ "./js/views/imgView.js":
+/*!*****************************!*\
+  !*** ./js/views/imgView.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ImgView; });\n/* harmony import */ var _view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view */ \"./js/views/view.js\");\n\r\n\r\nclass ImgView extends _view__WEBPACK_IMPORTED_MODULE_0__[\"default\"]{\r\n  _createView(imageData){\r\n    let html = this._titleHTML();\r\n    html += `\r\n        <div class=\"${this.className}__box\">\r\n          <img src=\"${imageData.urls.small}\">\r\n          <div class=\"${this.className}__info\">\r\n          <p class=\"${this.className}__row\"><span>User.name:</span> ${imageData.user.name}</p>\r\n          <p class=\"${this.className}__row\"><span>created_at:</span> ${imageData.created_at}</p>\r\n          <p class=\"${this.className}__row\"><span>downloads:</span> ${imageData.downloads}</p>\r\n</div>\r\n</div>\r\n          `;\r\n    return html;\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/views/imgView.js?");
+
+/***/ }),
+
+/***/ "./js/views/view.js":
+/*!**************************!*\
+  !*** ./js/views/view.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return View; });\n\r\nclass View{\r\n  constructor(parent, title, className) {\r\n    this.parent = parent;\r\n    this.title = title;\r\n    this.className = className;\r\n  }\r\n  \r\n  _titleHTML() {\r\n    return `<h3 class=\"title\">${this.title}</h3><ul id=\"${this.className}\">`\r\n  }\r\n  \r\n  _itemHTML(id, text) {\r\n    return `<li>\r\n              <a href=\"#\" class=\"${this.className}__item\" data-id=\"${id}\"> ${text}</a>\r\n            </li>`\r\n  }\r\n  \r\n  _createView(collections){\r\n    let html = this._titleHTML();\r\n    html += `<ul>`;\r\n    collections.forEach((item) => {\r\n      html += this._itemHTML(item.id, item.title)\r\n    });\r\n    html += '</ul>';\r\n    return html;\r\n  }\r\n  \r\n  bindClick(hendler){\r\n    this.parent.addEventListener('click', (e) => {\r\n      e.preventDefault();\r\n      hendler(e)\r\n    })\r\n  }\r\n  \r\n  show(collection) {\r\n    this.parent.innerHTML = this._createView(collection);\r\n  }\r\n}\n\n//# sourceURL=webpack:///./js/views/view.js?");
 
 /***/ }),
 
